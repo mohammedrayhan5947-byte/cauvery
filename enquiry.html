@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preload" as="image" href="assets/images/wholeview.webp" fetchpriority="high" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Enquiry &amp; Booking — Cauvery Resorts, Coorg</title>
+  <meta name="description" content="Enquire or book your stay at Cauvery Resorts near Talacauvery and Bhagamandala, Coorg. Fill the form and we'll respond within hours." />
+  <link rel="canonical" href="https://www.cauveryresorts.com/enquiry.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.cauveryresorts.com/enquiry.html" />
+  <meta property="og:title" content="Enquiry & Booking — Cauvery Resorts, Coorg" />
+  <meta property="og:description" content="Enquire or book your stay at Cauvery Resorts near Talacauvery and Bhagamandala, Coorg. Fill the form and we'll respond within hours." />
+  <meta property="og:image" content="https://www.cauveryresorts.com/assets/images/Sunrise.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Enquiry & Booking — Cauvery Resorts, Coorg" />
+  <meta name="twitter:description" content="Enquire or book your stay at Cauvery Resorts near Talacauvery and Bhagamandala, Coorg." />
+  <meta name="twitter:image" content="https://www.cauveryresorts.com/assets/images/Sunrise.webp" />
+  <link rel="manifest" href="manifest.json" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.cauveryresorts.com/"},{"@type":"ListItem","position":2,"name":"Enquiry","item":"https://www.cauveryresorts.com/enquiry.html"}]}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/design-v2.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="page-transition" id="pageTrans"></div>
+  <nav class="navbar" id="mainNav"><div class="container"><div class="navbar__inner">
+    <a href="index.html" class="navbar__logo">
+      <img src="assets/images/logo.png" alt="Cauvery Resorts Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+      <span class="navbar__logo-text hidden"><span>Cauvery Resorts</span><span>Coorg &bull; Since 2008</span></span>
+    </a>
+    <button class="navbar__toggle" aria-label="Toggle Menu" id="navToggle"><span></span><span></span><span></span></button>
+
+
+    <ul class="navbar__links" id="navLinks">
+      <li><a href="index.html">Home</a></li><li><a href="aboutus.html">About</a></li>
+      <li><a href="accommodation.html">Rooms</a></li><li><a href="restaurant.html">Restaurant</a></li>
+      <li><a href="activities.html">Activities</a></li><li><a href="gallery.html">Gallery</a></li>
+      <li><a href="tariff_booking.html">Tariff</a></li><li><a href="faq.html">FAQ</a></li>
+      <li><a href="contactus.html">Contact</a></li>
+      
+      
+          <li class="nav-prem-wrap">
+        <a href="#enquiryForm" class="btn-prem btn-prem-query">
+          <span class="btn-prem__label">Enquire Now</span>
+          <span class="btn-prem__icon"><i class="fa fa-paper-plane"></i></span>
+        </a>
+      </li>
+</ul>
+  </div></div></nav>
+
+  <div class="page-hero">
+    <div class="page-hero__bg" style="background-image:url('assets/images/wholeview.webp');"></div>
+    <div class="page-hero__bg" style="background-image:url('assets/images/Photoshoot scenery.webp');"></div>
+    <div class="page-hero__bg" style="background-image:url('assets/images/Sunrise.webp');"></div>
+    <div class="page-hero__bg" style="background-image:url('assets/images/Terrace view.webp');"></div>
+    <div class="page-hero__overlay"></div>
+    <div class="container"><div class="page-hero__content">
+      <h1>Enquiry &amp; Booking</h1>
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Enquiry</span></div>
+    </div></div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-2">
+        <!-- Form -->
+        <div data-aos="fade-right">
+          <h2 class="section-title" style="margin-bottom:.5rem;">Plan Your Stay</h2>
+          <p style="margin-bottom:1.75rem;color:var(--brown-light);font-size:.95rem;">Just fill this in — we'll call or WhatsApp you back within a few hours.</p>
+          <form id="enquiryForm" action="/api/enquiry" method="POST" data-validate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name *</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="e.g. Ramesh Kumar" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">WhatsApp Number *</label>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="+91 XXXXXXXXXX" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="checkin">Check-In *</label>
+                <input type="date" id="checkin" name="checkin" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label for="checkout">Check-Out *</label>
+                <input type="date" id="checkout" name="checkout" class="form-control" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="guests">No. of Guests *</label>
+                <input type="number" id="guests" name="guests" class="form-control" placeholder="e.g. 4" min="1" required />
+              </div>
+              <div class="form-group">
+                <label for="roomtype">What do you need?</label>
+                <select id="roomtype" name="roomtype" class="form-control">
+                  <option value="">Not sure yet</option>
+                  <option>Non-AC Room (₹1,500/night)</option>
+                  <option>AC Deluxe Room (₹2,500/night)</option>
+                  <option>Dormitory (₹400/person)</option>
+                  <option>Day Bathing Only (₹100/person)</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Anything else we should know?</label>
+              <textarea id="message" name="message" class="form-control" rows="3" placeholder="Early check-out for darshan, group meals, bus parking..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;margin-top:.5rem;"><i class="fa fa-paper-plane"></i> Send Enquiry</button>
+            <p style="text-align:center;margin-top:1rem;font-size:.82rem;color:var(--brown-light);">Or reach us directly — <a href="https://wa.me/919449485133" target="_blank" style="color:var(--saffron);font-weight:600;">WhatsApp us</a> for faster reply.</p>
+          </form>
+          <div id="formSuccess" style="display:none;background:var(--cream);border:2px solid var(--gold);border-radius:var(--r-xl);padding:2.5rem 2rem;margin-top:1rem;text-align:center;">
+            <div style="font-size:3rem;margin-bottom:.8rem;">🙏</div>
+            <h3 style="font-family:var(--serif);color:var(--brown);font-size:1.6rem;margin-bottom:.6rem;">Namaste! Thank You.</h3>
+            <p style="color:var(--brown-mid);font-size:1rem;line-height:1.8;margin-bottom:1.2rem;">Your enquiry has been received. We will get back to you <strong>within a few hours</strong> to confirm availability and answer any questions.</p>
+            <p style="color:var(--brown-mid);font-size:.92rem;">For urgent assistance, feel free to call or WhatsApp us directly:</p>
+            <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:1rem;">
+              <a href="tel:+919449485133" class="btn btn-primary btn-sm"><i class="fa fa-phone"></i> +91-944-9485133</a>
+              <a href="https://wa.me/919449485133?text=Hi%2C%20I%20just%20submitted%20an%20enquiry%20on%20your%20website" target="_blank" rel="noopener" class="btn btn-sm" style="background:#25d366;color:#fff;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+          </div>
+        </div>
+        <!-- Quick Contact -->
+        <div data-aos="fade-left">
+          <span class="section-label">Quick Contact</span>
+          <h2 class="section-title">Prefer to<br /><em>Call Directly?</em></h2>
+          <div class="contact-card" style="margin-top:1.5rem;">
+            <div class="contact-item">
+              <div class="contact-item__icon"><i class="fa fa-phone"></i></div>
+              <div><h4>Call Us</h4><a href="tel:+919449485133" style="font-size:1.1rem;font-weight:700;color:var(--saffron);">+91-944-9485133</a></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item__icon"><i class="fab fa-whatsapp"></i></div>
+              <div><h4>WhatsApp</h4><a href="https://wa.me/919449485133?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20a%20stay%20at%20Cauvery%20Resorts" target="_blank" rel="noopener" style="font-size:1rem;color:var(--saffron);">Chat on WhatsApp</a></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item__icon"><i class="fa fa-envelope"></i></div>
+              <div><h4>Email</h4><a href="mailto:cauveryresorts@gmail.com">cauveryresorts@gmail.com</a></div>
+            </div>
+          </div>
+          <div style="background:var(--cream);border-radius:var(--r-xl);padding:1.5rem;margin-top:1.5rem;border:1px solid var(--border);">
+            <h4 style="font-size:.95rem;font-family:var(--serif);color:var(--saffron-dark);margin-bottom:.8rem;">What to Include in Your Enquiry</h4>
+            <ul style="display:flex;flex-direction:column;gap:.5rem;">
+              <li style="font-size:.88rem;color:var(--brown-mid);padding-left:1.1rem;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">✦</span> Your travel dates (check-in &amp; check-out)</li>
+              <li style="font-size:.88rem;color:var(--brown-mid);padding-left:1.1rem;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">✦</span> Number of guests (adults &amp; children)</li>
+              <li style="font-size:.88rem;color:var(--brown-mid);padding-left:1.1rem;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">✦</span> Room preference (AC / Non-AC / Dormitory)</li>
+              <li style="font-size:.88rem;color:var(--brown-mid);padding-left:1.1rem;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">✦</span> Meal requirements (with meals / without)</li>
+              <li style="font-size:.88rem;color:var(--brown-mid);padding-left:1.1rem;position:relative;"><span style="position:absolute;left:0;color:var(--gold);">✦</span> Any special requests (early checkout, bus parking, etc.)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand"><span class="footer__logo-text">Cauvery Resorts</span><span class="footer__logo-sub">Coorg &bull; Since 2008</span><p>A sacred retreat near the source of River Cauvery.</p><div class="footer__socials"><a href="https://wa.me/919449485133?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20stay%20at%20Cauvery%20Resorts%2C%20Coorg" class="footer__social"><i class="fab fa-whatsapp"></i></a></div></div>
+      <div class="footer__col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="accommodation.html">Rooms</a></li><li><a href="restaurant.html">Restaurant</a></li><li><a href="tariff_booking.html">Tariff</a></li></ul></div>
+      <div class="footer__col"><h4>Information</h4><ul><li><a href="faq.html">FAQs</a></li><li><a href="contactus.html">Contact</a></li><li><a href="amenities.html">Amenities</a></li></ul></div>
+      <div class="footer__col"><h4>Nearby</h4><ul><li><a href="resorts-near-talacauvery.html">Near Talacauvery</a></li><li><a href="hotels-near-bhagamandala.html">Near Bhagamandala</a></li></ul></div>
+      <div class="footer__col"><h4>Contact</h4><div class="footer__contact-list"><div class="footer__contact-item"><i class="fa fa-phone"></i><div><a href="tel:+919449485133">+91-944-9485133</a><br/><a href="tel:+919964785133">+91-996-4785133</a></div></div><div class="footer__contact-item"><i class="fa fa-map-marker-alt"></i><span>Near Talacauvery, Coorg</span></div></div></div>
+    </div>
+    <div class="footer__bottom"><span>&copy; <span id="footerYear"></span> Cauvery Resorts. All rights reserved.</span></div>
+  </div></footer></div>
+  <div class="fab-wrap"><a href="https://wa.me/919449485133?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20stay%20at%20Cauvery%20Resorts%2C%20Coorg" class="fab fab-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a><a href="tel:+919449485133" class="fab fab-call"><i class="fa fa-phone"></i></a></div>
+  <script src="assets/js/main.js"></script>
+  <script>
+  var enquiryForm=document.getElementById('enquiryForm');
+  if(enquiryForm){enquiryForm.addEventListener('submit',function(e){
+    e.preventDefault();
+    var btn=enquiryForm.querySelector('button[type="submit"]');
+    btn.disabled=true;btn.innerHTML='<i class="fa fa-spinner fa-spin"></i> Sending…';
+    var data={
+      name:     document.getElementById('name').value,
+      phone:    document.getElementById('phone').value,
+      email:    (document.getElementById('email') || {}).value || '',
+      checkin:  document.getElementById('checkin').value,
+      checkout: document.getElementById('checkout').value,
+      guests:   document.getElementById('guests').value,
+      roomtype: document.getElementById('roomtype').value,
+      message:  document.getElementById('message').value,
+    };
+    fetch('/api/enquiry',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(data)
+    }).then(function(r){return r.json();}).then(function(res){
+      if(res.success){
+        enquiryForm.style.display='none';
+        document.getElementById('formSuccess').style.display='block';
+      } else {
+        btn.disabled=false;
+        btn.innerHTML='<i class="fa fa-paper-plane"></i> Send Enquiry';
+        alert(res.error||'Something went wrong. Please call us directly.');
+      }
+    }).catch(function(){
+      btn.disabled=false;
+      btn.innerHTML='<i class="fa fa-paper-plane"></i> Send Enquiry';
+      var waMsg='Hello, I would like to enquire about a stay at Cauvery Resorts.\n\n'
+        +'*Name:* '+data.name+'\n'
+        +'*Phone:* '+data.phone+'\n'
+        +(data.checkin?'*Check-In:* '+data.checkin+'\n':'')
+        +(data.checkout?'*Check-Out:* '+data.checkout+'\n':'')
+        +(data.guests?'*Guests:* '+data.guests+'\n':'')
+        +(data.roomtype?'*Room:* '+data.roomtype+'\n':'')
+        +(data.message?'*Notes:* '+data.message+'\n':'');
+      if(confirm('We could not connect to the server. Would you like to send your enquiry via WhatsApp instead?')){
+        window.open('https://wa.me/919449485133?text='+encodeURIComponent(waMsg),'_blank');
+      }
+    });
+  });}
+  var fy=document.getElementById('footerYear');if(fy)fy.textContent=new Date().getFullYear();
+  document.querySelectorAll('a[href]').forEach(function(a){var href=a.getAttribute('href');if(!href||href.startsWith('#')||href.startsWith('tel:')||href.startsWith('mailto:')||href.startsWith('http')||a.target==='_blank')return;a.addEventListener('click',function(e){e.preventDefault();var pt=document.getElementById('pageTrans');if(pt){pt.classList.add('enter');setTimeout(function(){window.location.href=href;},380);}else{window.location.href=href;}});});
+  </script>
+  <!-- WhatsApp Chat Popup -->
+  <div class="wa-popup" id="waPopup" role="dialog" aria-label="Chat with us on WhatsApp">
+    <div class="wa-popup__header">
+      <div class="wa-popup__avatar"><i class="fab fa-whatsapp"></i></div>
+      <div>
+        <div class="wa-popup__name">Cauvery Resorts</div>
+        <div class="wa-popup__status">Typically replies within minutes</div>
+      </div>
+      <button class="wa-popup__close" aria-label="Close chat">&times;</button>
+    </div>
+    <div class="wa-popup__body">
+      <div class="wa-popup__bubble">
+        Hello! 👋 Looking to book a stay near Talacauvery?<br/>We'd love to help. Tap below to chat with us on WhatsApp!
+        <div class="wa-popup__time">Just now</div>
+      </div>
+    </div>
+    <div class="wa-popup__footer">
+      <a href="https://wa.me/919449485133?text=Hi%2C+I+saw+your+website+and+want+to+enquire+about+a+stay+at+Cauvery+Resorts%2C+Coorg" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Start Chat</a>
+    </div>
+  </div>
+
+  <div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" id="lbClose" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" id="lbPrev" aria-label="Previous"><i class="fa fa-chevron-left"></i></button>
+    <img src="" alt="" id="lbImg" />
+    <button class="lightbox-next" id="lbNext" aria-label="Next"><i class="fa fa-chevron-right"></i></button>
+  </div>
+  <!-- Mobile sticky call bar -->
+  <div class="mobile-cta-bar">
+    <a href="tel:+919449485133" class="mobile-cta-bar__btn mobile-cta-bar__btn--call"><i class="fa fa-phone"></i> Call Now</a>
+    <a href="https://wa.me/919449485133?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20stay" target="_blank" rel="noopener" class="mobile-cta-bar__btn mobile-cta-bar__btn--wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    <a href="enquiry.html" class="mobile-cta-bar__btn mobile-cta-bar__btn--enquiry"><i class="fa fa-paper-plane"></i> Enquire</a>
+  </div>
+  <!-- Cookie Banner -->
+  <div id="cookieBanner">
+    <p>We use cookies to improve your experience. By continuing you agree to our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+    <button class="btn btn-primary btn-sm" id="cookieAccept">Accept</button>
+  </div>
+</body>
+</html>

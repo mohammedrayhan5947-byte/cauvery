@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin — Cauvery Resorts</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --saffron: #B35A00; --saffron-dark: #7A3B00; --gold: #D4A017;
+      --ivory: #FDF6EC;   --brown: #2E1A0A;        --cream: #F5EDD8;
+      --border: #e0d0a8;  --red: #c0392b;          --green: #27ae60;
+      --blue: #2980b9;    --grey: #7f8c8d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f4f0e8; color: var(--brown); min-height: 100vh; }
+
+    /* ── Login screen ── */
+    #loginScreen {
+      display: flex; align-items: center; justify-content: center;
+      min-height: 100vh; background: var(--saffron-dark);
+    }
+    .login-box {
+      background: #fff; border-radius: 12px; padding: 40px 36px;
+      width: 340px; box-shadow: 0 8px 32px rgba(0,0,0,.25);
+    }
+    .login-box h1 { color: var(--saffron); font-size: 1.4rem; margin-bottom: 4px; }
+    .login-box p  { color: var(--grey); font-size: .85rem; margin-bottom: 24px; }
+    .login-box input {
+      width: 100%; padding: 10px 14px; border: 1px solid var(--border);
+      border-radius: 6px; font-size: 1rem; margin-bottom: 14px; outline: none;
+    }
+    .login-box input:focus { border-color: var(--saffron); }
+    .login-box button {
+      width: 100%; padding: 11px; background: var(--saffron); color: #fff;
+      border: none; border-radius: 6px; font-size: 1rem; font-weight: 600;
+      cursor: pointer;
+    }
+    .login-box button:hover { background: var(--saffron-dark); }
+    #loginError { color: var(--red); font-size: .85rem; margin-top: 10px; display: none; }
+
+    /* ── App shell ── */
+    #app { display: none; }
+    header {
+      background: var(--saffron-dark); color: #fff;
+      padding: 0 24px; height: 56px; display: flex; align-items: center;
+      justify-content: space-between; position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,.2);
+    }
+    header h1 { font-size: 1.1rem; font-weight: 700; }
+    header span { font-size: .8rem; color: #fde8c8; }
+    .logout-btn {
+      background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.3);
+      color: #fff; padding: 6px 14px; border-radius: 20px; cursor: pointer;
+      font-size: .82rem;
+    }
+    .logout-btn:hover { background: rgba(255,255,255,.25); }
+
+    main { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+
+    /* ── Stat cards ── */
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 28px; }
+    .stat-card {
+      background: #fff; border-radius: 10px; padding: 18px 16px;
+      border-top: 4px solid var(--border); text-align: center;
+      box-shadow: 0 1px 4px rgba(0,0,0,.06);
+    }
+    .stat-card.pending   { border-color: #e67e22; }
+    .stat-card.confirmed { border-color: var(--green); }
+    .stat-card.cancelled { border-color: var(--red); }
+    .stat-card.completed { border-color: var(--blue); }
+    .stat-card.total     { border-color: var(--saffron); }
+    .stat-num  { font-size: 2rem; font-weight: 700; color: var(--brown); }
+    .stat-label{ font-size: .78rem; color: var(--grey); text-transform: uppercase; letter-spacing: .05em; margin-top: 2px; }
+
+    /* ── Filters ── */
+    .toolbar {
+      display: flex; gap: 10px; flex-wrap: wrap; align-items: center;
+      margin-bottom: 16px;
+    }
+    .filter-btn {
+      padding: 7px 16px; border-radius: 20px; border: 1px solid var(--border);
+      background: #fff; cursor: pointer; font-size: .84rem; transition: all .15s;
+    }
+    .filter-btn.active, .filter-btn:hover { background: var(--saffron); color: #fff; border-color: var(--saffron); }
+    .search-box {
+      margin-left: auto; padding: 7px 14px; border: 1px solid var(--border);
+      border-radius: 20px; font-size: .84rem; outline: none; width: 220px;
+    }
+    .search-box:focus { border-color: var(--saffron); }
+
+    /* ── Table ── */
+    .table-wrap { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+    table { width: 100%; border-collapse: collapse; font-size: .875rem; }
+    thead th {
+      background: var(--ivory); padding: 12px 14px; text-align: left;
+      font-weight: 600; color: var(--grey); font-size: .78rem;
+      text-transform: uppercase; letter-spacing: .04em; border-bottom: 1px solid var(--border);
+    }
+    tbody tr { border-bottom: 1px solid #f0e8d8; transition: background .1s; }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: #fdf8f0; }
+    tbody td { padding: 13px 14px; vertical-align: top; }
+    .td-name  { font-weight: 600; color: var(--brown); }
+    .td-phone { color: var(--saffron); font-size: .82rem; }
+    .td-email { color: var(--grey); font-size: .78rem; }
+    .td-dates { font-size: .82rem; }
+    .td-nights{ color: var(--grey); font-size: .75rem; }
+
+    .badge {
+      display: inline-block; padding: 3px 10px; border-radius: 20px;
+      font-size: .72rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em;
+    }
+    .badge-pending   { background: #fef3e2; color: #e67e22; }
+    .badge-confirmed { background: #eafaf1; color: var(--green); }
+    .badge-cancelled { background: #fdecea; color: var(--red); }
+    .badge-completed { background: #eaf4fb; color: var(--blue); }
+
+    .action-btn {
+      padding: 5px 10px; border-radius: 5px; border: none; cursor: pointer;
+      font-size: .78rem; font-weight: 600; margin-right: 4px; transition: opacity .15s;
+    }
+    .action-btn:hover { opacity: .8; }
+    .btn-confirm  { background: #eafaf1; color: var(--green); }
+    .btn-cancel   { background: #fdecea; color: var(--red); }
+    .btn-complete { background: #eaf4fb; color: var(--blue); }
+    .btn-notes    { background: var(--ivory); color: var(--brown); }
+
+    /* ── Notes modal ── */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,.45); z-index: 200;
+      align-items: center; justify-content: center;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: #fff; border-radius: 12px; padding: 28px 28px 24px;
+      width: 440px; max-width: 95vw;
+    }
+    .modal h3 { margin-bottom: 12px; color: var(--saffron-dark); }
+    .modal textarea {
+      width: 100%; height: 120px; padding: 10px; border: 1px solid var(--border);
+      border-radius: 6px; font-size: .9rem; resize: vertical; outline: none;
+    }
+    .modal textarea:focus { border-color: var(--saffron); }
+    .modal-actions { display: flex; gap: 10px; margin-top: 14px; justify-content: flex-end; }
+    .modal-actions button {
+      padding: 8px 20px; border-radius: 6px; border: none; cursor: pointer;
+      font-size: .88rem; font-weight: 600;
+    }
+    .btn-save   { background: var(--saffron); color: #fff; }
+    .btn-close2 { background: var(--ivory); color: var(--brown); }
+
+    /* ── Pagination ── */
+    .pagination { display: flex; gap: 8px; justify-content: center; margin-top: 20px; }
+    .page-btn {
+      padding: 7px 14px; border-radius: 6px; border: 1px solid var(--border);
+      background: #fff; cursor: pointer; font-size: .84rem;
+    }
+    .page-btn.active, .page-btn:hover { background: var(--saffron); color: #fff; border-color: var(--saffron); }
+    .page-btn:disabled { opacity: .4; cursor: default; }
+
+    .empty { text-align: center; padding: 48px; color: var(--grey); }
+    .loading { text-align: center; padding: 48px; color: var(--grey); }
+
+    @media (max-width: 700px) {
+      .hide-mobile { display: none; }
+      .search-box { width: 100%; margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Login Screen -->
+<div id="loginScreen">
+  <div class="login-box">
+    <h1>ॐ Cauvery Resorts</h1>
+    <p>Admin Dashboard — Staff Only</p>
+    <input type="password" id="pwInput" placeholder="Enter admin password" />
+    <button onclick="doLogin()"><i class="fa fa-lock"></i> Sign In</button>
+    <div id="loginError">Wrong password. Please try again.</div>
+  </div>
+</div>
+
+<!-- App -->
+<div id="app">
+  <header>
+    <div>
+      <h1>Cauvery Resorts — Admin</h1>
+      <span id="headerStats"></span>
+    </div>
+    <button class="logout-btn" onclick="logout()"><i class="fa fa-sign-out-alt"></i> Logout</button>
+  </header>
+
+  <main>
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stat-card pending">  <div class="stat-num" id="sPending">–</div>  <div class="stat-label">Pending</div></div>
+      <div class="stat-card confirmed"><div class="stat-num" id="sConfirmed">–</div><div class="stat-label">Confirmed</div></div>
+      <div class="stat-card completed"><div class="stat-num" id="sCompleted">–</div><div class="stat-label">Completed</div></div>
+      <div class="stat-card cancelled"><div class="stat-num" id="sCancelled">–</div><div class="stat-label">Cancelled</div></div>
+      <div class="stat-card total">    <div class="stat-num" id="sTotal">–</div>    <div class="stat-label">Total</div></div>
+    </div>
+
+    <!-- Filters + Search -->
+    <div class="toolbar">
+      <button class="filter-btn active" onclick="setFilter('all',this)">All</button>
+      <button class="filter-btn" onclick="setFilter('pending',this)">Pending</button>
+      <button class="filter-btn" onclick="setFilter('confirmed',this)">Confirmed</button>
+      <button class="filter-btn" onclick="setFilter('completed',this)">Completed</button>
+      <button class="filter-btn" onclick="setFilter('cancelled',this)">Cancelled</button>
+      <input class="search-box" type="text" id="searchBox" placeholder="Search name or phone…" oninput="onSearch()" />
+    </div>
+
+    <!-- Table -->
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Guest</th>
+            <th>Dates</th>
+            <th class="hide-mobile">Guests</th>
+            <th class="hide-mobile">Room</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <tr><td colspan="7" class="loading"><i class="fa fa-spinner fa-spin"></i> Loading…</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="pagination" id="pagination"></div>
+  </main>
+</div>
+
+<!-- Notes Modal -->
+<div class="modal-overlay" id="notesModal">
+  <div class="modal">
+    <h3><i class="fa fa-sticky-note"></i> Admin Notes</h3>
+    <textarea id="notesText" placeholder="Add internal notes about this booking…"></textarea>
+    <div class="modal-actions">
+      <button class="btn-close2" onclick="closeModal()">Cancel</button>
+      <button class="btn-save"   onclick="saveNotes()">Save Notes</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const API = '';  // same origin — backend serves this page
+  let token        = localStorage.getItem('cr_admin_token') || '';
+  let currentFilter = 'all';
+  let currentPage   = 1;
+  let currentNoteId = null;
+  let allRows       = [];
+  let searchTerm    = '';
+
+  // ── Auth ────────────────────────────────────────────────────────
+  async function doLogin() {
+    const pw = document.getElementById('pwInput').value;
+    document.getElementById('loginError').style.display = 'none';
+    const r = await fetch(API + '/admin/login', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password: pw }),
+    });
+    if (r.ok) {
+      const { token: t } = await r.json();
+      token = t;
+      localStorage.setItem('cr_admin_token', t);
+      showApp();
+    } else {
+      document.getElementById('loginError').style.display = 'block';
+    }
+  }
+
+  function logout() {
+    localStorage.removeItem('cr_admin_token');
+    location.reload();
+  }
+
+  function authHeaders() {
+    return { Authorization: 'Bearer ' + token, 'Content-Type': 'application/json' };
+  }
+
+  function showApp() {
+    document.getElementById('loginScreen').style.display = 'none';
+    document.getElementById('app').style.display = 'block';
+    loadStats();
+    loadEnquiries();
+  }
+
+  // Auto-login if token present
+  if (token) showApp();
+
+  document.getElementById('pwInput').addEventListener('keydown', e => { if (e.key === 'Enter') doLogin(); });
+
+  // ── Data loading ─────────────────────────────────────────────────
+  async function loadStats() {
+    const r = await fetch(API + '/admin/api/stats', { headers: authHeaders() });
+    if (!r.ok) return;
+    const s = await r.json();
+    document.getElementById('sPending').textContent   = s.pending;
+    document.getElementById('sConfirmed').textContent = s.confirmed;
+    document.getElementById('sCompleted').textContent = s.completed;
+    document.getElementById('sCancelled').textContent = s.cancelled;
+    document.getElementById('sTotal').textContent     = s.total;
+    document.getElementById('headerStats').textContent = s.pending + ' pending';
+  }
+
+  async function loadEnquiries() {
+    document.getElementById('tableBody').innerHTML =
+      '<tr><td colspan="7" class="loading"><i class="fa fa-spinner fa-spin"></i> Loading…</td></tr>';
+
+    const params = new URLSearchParams({ status: currentFilter, page: currentPage, limit: 25 });
+    const r = await fetch(API + '/admin/api/enquiries?' + params, { headers: authHeaders() });
+    if (!r.ok) {
+      if (r.status === 401) { logout(); return; }
+      document.getElementById('tableBody').innerHTML = '<tr><td colspan="7" class="empty">Failed to load data.</td></tr>';
+      return;
+    }
+    const { data, total } = await r.json();
+    allRows = data;
+    renderTable(applySearch(data));
+    renderPagination(total);
+  }
+
+  function applySearch(rows) {
+    if (!searchTerm) return rows;
+    const q = searchTerm.toLowerCase();
+    return rows.filter(r =>
+      r.name.toLowerCase().includes(q) ||
+      r.phone.includes(q) ||
+      (r.email && r.email.toLowerCase().includes(q))
+    );
+  }
+
+  function onSearch() {
+    searchTerm = document.getElementById('searchBox').value.trim();
+    renderTable(applySearch(allRows));
+  }
+
+  // ── Render ────────────────────────────────────────────────────────
+  function renderTable(rows) {
+    if (!rows.length) {
+      document.getElementById('tableBody').innerHTML = '<tr><td colspan="7" class="empty">No enquiries found.</td></tr>';
+      return;
+    }
+    document.getElementById('tableBody').innerHTML = rows.map(r => {
+      const nights = Math.ceil((new Date(r.checkout) - new Date(r.checkin)) / 86400000);
+      return `<tr>
+        <td style="color:var(--grey);font-size:.78rem;">#${r.id}</td>
+        <td>
+          <div class="td-name">${esc(r.name)}</div>
+          <div class="td-phone"><a href="tel:${esc(r.phone)}">${esc(r.phone)}</a></div>
+          <div class="td-email">${r.email ? esc(r.email) : ''}</div>
+        </td>
+        <td class="td-dates">
+          ${r.checkin} → ${r.checkout}
+          <div class="td-nights">${nights} night${nights !== 1 ? 's' : ''}</div>
+        </td>
+        <td class="hide-mobile">${r.guests}</td>
+        <td class="hide-mobile" style="font-size:.78rem;color:var(--grey);">${r.room_type ? esc(r.room_type) : '—'}</td>
+        <td><span class="badge badge-${r.status}">${r.status}</span></td>
+        <td>
+          ${r.status !== 'confirmed' ? `<button class="action-btn btn-confirm"  onclick="updateStatus(${r.id},'confirmed')">✓ Confirm</button>` : ''}
+          ${r.status !== 'completed' ? `<button class="action-btn btn-complete" onclick="updateStatus(${r.id},'completed')">✓ Done</button>` : ''}
+          ${r.status !== 'cancelled' ? `<button class="action-btn btn-cancel"   onclick="updateStatus(${r.id},'cancelled')">✗ Cancel</button>` : ''}
+          <button class="action-btn btn-notes" onclick="openNotes(${r.id}, ${JSON.stringify(r.admin_notes || '')})">📝 Notes</button>
+        </td>
+      </tr>`;
+    }).join('');
+  }
+
+  function renderPagination(total) {
+    const pages = Math.ceil(total / 25);
+    if (pages <= 1) { document.getElementById('pagination').innerHTML = ''; return; }
+    let html = `<button class="page-btn" onclick="goPage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>← Prev</button>`;
+    for (let i = 1; i <= pages; i++) {
+      html += `<button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="goPage(${i})">${i}</button>`;
+    }
+    html += `<button class="page-btn" onclick="goPage(${currentPage + 1})" ${currentPage === pages ? 'disabled' : ''}>Next →</button>`;
+    document.getElementById('pagination').innerHTML = html;
+  }
+
+  // ── Actions ───────────────────────────────────────────────────────
+  function setFilter(f, el) {
+    currentFilter = f; currentPage = 1;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    el.classList.add('active');
+    loadEnquiries();
+  }
+
+  function goPage(p) { currentPage = p; loadEnquiries(); }
+
+  async function updateStatus(id, status) {
+    const r = await fetch(API + `/admin/api/enquiries/${id}`, {
+      method: 'PATCH', headers: authHeaders(),
+      body: JSON.stringify({ status }),
+    });
+    if (r.ok) { loadStats(); loadEnquiries(); }
+  }
+
+  function openNotes(id, notes) {
+    currentNoteId = id;
+    document.getElementById('notesText').value = notes;
+    document.getElementById('notesModal').classList.add('open');
+  }
+
+  function closeModal() { document.getElementById('notesModal').classList.remove('open'); }
+
+  async function saveNotes() {
+    const notes = document.getElementById('notesText').value;
+    const r = await fetch(API + `/admin/api/enquiries/${currentNoteId}`, {
+      method: 'PATCH', headers: authHeaders(),
+      body: JSON.stringify({ admin_notes: notes }),
+    });
+    if (r.ok) { closeModal(); loadEnquiries(); }
+  }
+
+  function esc(s) {
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  document.getElementById('notesModal').addEventListener('click', e => {
+    if (e.target === document.getElementById('notesModal')) closeModal();
+  });
+</script>
+</body>
+</html>

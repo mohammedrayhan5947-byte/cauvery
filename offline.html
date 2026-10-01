@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>You're Offline — Cauvery Resorts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: linear-gradient(160deg, #0a1f0a 0%, #1a3d1a 50%, #0d2b0d 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      color: #fff;
+    }
+    .card {
+      text-align: center;
+      max-width: 480px;
+      width: 100%;
+      animation: fadeUp .7s ease forwards;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .icon {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+    .gold {
+      background: linear-gradient(135deg, #c9a84c, #f0d478, #b8943e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 5vw, 2.4rem);
+      margin-bottom: 1rem;
+    }
+    p {
+      color: rgba(255,255,255,.65);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      font-size: .95rem;
+    }
+    .contact-card {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+    }
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      font-size: .9rem;
+    }
+    .contact-row span:first-child { font-size: 1.2rem; }
+    .contact-row a { color: #e8c97a; text-decoration: none; }
+    .contact-card__label { color: #fff; font-size: .85rem; font-weight: 600; margin: 0; text-align: left; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .75rem 2rem;
+      border-radius: 50px;
+      font-size: .9rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      background: linear-gradient(135deg, #c9a84c 0%, #e8c96a 50%, #b8943e 100%);
+      color: #1a1a1a;
+      transition: transform .25s, box-shadow .25s;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,168,76,.4); }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <span class="icon">📡</span>
+    <h1 class="gold">No Internet Connection</h1>
+    <p>
+      It seems you've gone offline — perhaps like a peaceful retreat in the Coorg hills with no signal!
+      Please check your connection and try again.
+    </p>
+
+    <div class="contact-card">
+      <p class="contact-card__label">Reach us directly:</p>
+      <div class="contact-row">
+        <span>📞</span>
+        <span><a href="tel:+919449485133">+91-944-9485133</a> / <a href="tel:+919964785133">+91-996-4785133</a></span>
+      </div>
+      <div class="contact-row">
+        <span>💬</span>
+        <span><a href="https://wa.me/919449485133?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20stay%20at%20Cauvery%20Resorts%2C%20Coorg">WhatsApp Us</a></span>
+      </div>
+      <div class="contact-row">
+        <span>✉️</span>
+        <span><a href="mailto:cauveryresorts@gmail.com">cauveryresorts@gmail.com</a></span>
+      </div>
+    </div>
+
+    <button class="btn" onclick="window.location.reload()">🔄 Try Again</button>
+  </div>
+  <!-- Share Button -->
+  <button class="share-btn" id="shareBtn" aria-label="Share this page" title="Share"><i class="fa fa-share-alt"></i></button>
+  <div class="share-toast" id="shareToast"><i class="fa fa-check"></i> Link copied!</div>
+  <script>
+  (function(){
+    var btn = document.getElementById('shareBtn');
+    var toast = document.getElementById('shareToast');
+    if(!btn) return;
+    // Show/hide with sticky bar
+    window.addEventListener('scroll', function(){
+      var y = window.scrollY||window.pageYOffset;
+      if(y>500) btn.classList.add('visible'); else btn.classList.remove('visible');
+    },{passive:true});
+    btn.addEventListener('click', function(){
+      var data = { title: document.title, url: window.location.href };
+      if(navigator.share){
+        navigator.share(data).catch(function(){});
+      } else {
+        navigator.clipboard && navigator.clipboard.writeText(window.location.href).then(function(){
+          toast.classList.add('show');
+          setTimeout(function(){ toast.classList.remove('show'); }, 2500);
+        });
+      }
+    });
+  })();
+  </script>
+</body>
+</html>
