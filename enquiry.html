@@ -196,23 +196,28 @@
       if(res.success){
         enquiryForm.style.display='none';
         document.getElementById('formSuccess').style.display='block';
-      } else {
-        btn.disabled=false;
-        btn.innerHTML='<i class="fa fa-paper-plane"></i> Send Enquiry';
-        alert(res.error||'Something went wrong. Please call us directly.');
-      }
+      } else { throw new Error(res.error||'failed'); }
     }).catch(function(){
       btn.disabled=false;
       btn.innerHTML='<i class="fa fa-paper-plane"></i> Send Enquiry';
-      var waMsg='Hello, I would like to enquire about a stay at Cauvery Resorts.\n\n'
-        +'*Name:* '+data.name+'\n'
-        +'*Phone:* '+data.phone+'\n'
-        +(data.checkin?'*Check-In:* '+data.checkin+'\n':'')
-        +(data.checkout?'*Check-Out:* '+data.checkout+'\n':'')
-        +(data.guests?'*Guests:* '+data.guests+'\n':'')
-        +(data.roomtype?'*Room:* '+data.roomtype+'\n':'')
-        +(data.message?'*Notes:* '+data.message+'\n':'');
-      if(confirm('We could not connect to the server. Would you like to send your enquiry via WhatsApp instead?')){
+      var waMsg='Hello, I would like to enquire about a stay at Cauvery Resorts.
+
+'
+        +'*Name:* '+data.name+'
+'
+        +'*Phone:* '+data.phone+'
+'
+        +(data.checkin?'*Check-In:* '+data.checkin+'
+':'')
+        +(data.checkout?'*Check-Out:* '+data.checkout+'
+':'')
+        +(data.guests?'*Guests:* '+data.guests+'
+':'')
+        +(data.roomtype?'*Room:* '+data.roomtype+'
+':'')
+        +(data.message?'*Notes:* '+data.message+'
+':'');
+      if(confirm('We could not submit your enquiry online. Would you like to send it via WhatsApp instead?')){
         window.open('https://wa.me/919449485133?text='+encodeURIComponent(waMsg),'_blank');
       }
     });

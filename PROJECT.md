@@ -9,7 +9,7 @@
 **Purpose:** Marketing and lead-generation website for a family-run pilgrim resort near Talacauvery and Bhagamandala, Coorg (Karnataka, India). All bookings are handled through WhatsApp and phone — there is no online payment or reservation system.
 
 ### Main Features
-- Enquiry form that composes a pre-filled WhatsApp message and opens `wa.me` in a new tab
+- Enquiry form that POSTs to `/api/enquiry` (saved to Postgres, owner and guest emailed via Resend); if the server is unreachable it offers a pre-filled WhatsApp message via `wa.me` as a fallback
 - Hero image slideshow (Swiper.js)
 - Room catalogue with pricing
 - Photo gallery with lightbox
@@ -77,7 +77,7 @@ Cauvery Resort/
 ├── assets/
 │   ├── css/
 │   │   ├── design-v2.css         # Single monolithic design system (~3 700 lines)
-│   │   ├── style.css             # Legacy/unused stylesheet
+│   │   ├── style.css             # Legacy stylesheet, used only by 404.html
 │   │   └── tailwind-input.css    # Tailwind entry file (not referenced in HTML)
 │   ├── js/
 │   │   └── main.js               # Shared JS (navbar toggle, scroll progress, AOS-like)

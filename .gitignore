@@ -2,3 +2,6 @@ node_modules/
 .vercel
 .env
 Cauvery Resort/
+
+.vercel
+.env*
