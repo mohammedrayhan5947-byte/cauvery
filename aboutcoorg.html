@@ -20,13 +20,14 @@
   <meta name="twitter:image" content="https://www.cauveryresorts.com/assets/images/Night view.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Figtree:wght@400;500;600;700;800&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/design-v2.css" />
   <link rel="manifest" href="manifest.json" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.cauveryresorts.com/"},{"@type":"ListItem","position":2,"name":"About Coorg","item":"https://www.cauveryresorts.com/aboutcoorg.html"}]}</script>
+  <noscript><style>[data-aos],[data-stagger]>*,.w>span,.reveal-mask,.reveal-mask>img{opacity:1!important;transform:none!important;clip-path:none!important}.draw path{stroke-dashoffset:0!important}.pb-bar__track i{transform:none!important}</style></noscript>
 </head>
-<body>
+<body class="pb-page">
   <a href="#main-content" class="skip-link">Skip to main content</a>
   <div class="scroll-progress" aria-hidden="true"></div>
   <div class="page-transition" id="pageTrans"></div>
@@ -55,107 +56,136 @@
 </ul>
   </div></div></nav>
 
-  <div class="page-hero">
-    <div class="page-hero__bg" style="background-image:url('assets/images/Photoshoot scenery.webp');"></div>
-    <div class="page-hero__bg" style="background-image:url('assets/images/Terrace view.webp');"></div>
-    <div class="page-hero__bg" style="background-image:url('assets/images/Forest view.webp');"></div>
-    <div class="page-hero__bg" style="background-image:url('assets/images/Cloudy view.webp');"></div>
-    <div class="page-hero__bg" style="background-image:url('assets/images/Sunrise.webp');"></div>
-    <div class="page-hero__overlay"></div>
-    <div class="container"><div class="page-hero__content">
-      <span class="section-label">Scotland of India</span>
-      <h1>About Coorg</h1>
-      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>About Coorg</span></div>
-    </div></div>
-  </div>
-
-  <!-- Coorg Intro -->
-  <section class="section">
+  <header class="pb-hero pb-hero--atlas pb-dark" id="top">
+    <div class="pb-hero__bg" data-parallax="0.12"><img src="assets/images/Photoshoot scenery.webp" alt="Misty Western Ghats hills of Coorg seen from Cauvery Resorts" fetchpriority="high" /></div>
+    <div class="pb-hero__shade"></div>
+    <div class="pb-contours" aria-hidden="true" data-parallax="0.08">
+      <svg class="draw" viewBox="0 0 700 600" preserveAspectRatio="xMaxYMid slice">
+        <path pathLength="1" d="M350 60C470 50 580 130 610 250S620 470 500 530 250 570 150 470 60 250 130 150 260 70 350 60z"/>
+        <path pathLength="1" d="M350 120C440 112 530 170 548 260S548 430 462 478 262 506 192 430 120 270 178 198 270 128 350 120z"/>
+        <path pathLength="1" d="M350 180C410 176 470 214 484 276S480 392 424 424 296 440 252 388 196 286 244 238 300 184 350 180z"/>
+        <path pathLength="1" d="M350 236C384 234 418 254 426 288S420 350 388 366 322 374 300 346 276 296 306 270 322 238 350 236z"/>
+      </svg>
+    </div>
     <div class="container">
-      <div class="grid-2">
-        <div data-aos="fade-right">
-          <span class="section-label">Kodagu District, Karnataka</span>
-          <h2 class="section-title">Coorg — Where Rivers Begin<br /><em>and Forests Breathe</em></h2>
-          <div class="divider-om"><span>ॐ</span></div>
-          <p style="margin-bottom:1rem;">Nestled in the Western Ghats of Karnataka, Coorg — officially known as Kodagu — is one of India's most celebrated hill destinations. Blanketed in coffee and tea plantations, ancient forests, and mist-covered peaks, this district holds a unique place in the hearts of pilgrims, naturalists, and travellers alike.</p>
-          <p style="margin-bottom:1.5rem;">Coorg is home to the sacred source of River Cauvery at Talacauvery, the holy Triveni Sangam at Bhagamandala, and the rich biodiversity of Brahmagiri and Nagarhole. It is a land where the divine and the natural exist in extraordinary harmony.</p>
-          <div style="display:flex;flex-wrap:wrap;gap:.75rem;">
-            <span class="veg-badge"><i class="fa fa-mountain"></i>&nbsp;900–1800m elevation</span>
-            <span class="veg-badge"><i class="fa fa-cloud-rain"></i>&nbsp;Best Oct–Feb</span>
-            <span class="veg-badge"><i class="fa fa-om"></i>&nbsp;Pilgrimage circuits</span>
+      <div class="pb-hero__inner">
+        <span class="section-label section-label--light">Scotland of India</span>
+        <h1 class="pb-hero__title" data-split data-hero>About <em>Coorg</em></h1>
+        <p class="pb-hero__lede">Kodagu, Karnataka: coffee and tea plantations, ancient forests and mist-covered peaks, where the sacred source of River Cauvery lies.</p>
+        <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>About Coorg</span></div>
+      </div>
+      <aside class="hero__ticket" aria-label="Coorg at a glance">
+        <small>at a glance</small>
+        <b>900&ndash;1800m <span>elevation</span></b>
+        <p>Best Oct&ndash;Feb. Pilgrimage circuits, coffee estates and waterfalls.</p>
+        <a href="enquiry.html">Plan your stay</a>
+      </aside>
+    </div>
+    <div class="hero__hills" aria-hidden="true" data-parallax-wrap>
+      <svg viewBox="0 0 1440 220" preserveAspectRatio="none">
+        <path class="h1" d="M0 120C120 70 220 90 330 60S560 20 700 70s280 50 420-10 220-30 320 20V220H0z"/>
+        <path class="h2" d="M0 150C160 110 280 140 420 105S700 70 860 120s300 40 440-10c70-25 110-10 140 10V220H0z"/>
+        <path class="h3" d="M0 190C200 165 360 195 540 172S900 150 1080 178s260 12 360-10V220H0z"/>
+      </svg>
+    </div>
+  </header>
+
+  <main id="main-content">
+  <!-- Coorg Intro -->
+  <section class="section" style="padding-top:clamp(2rem,5vw,4rem)">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="photo-stack" style="padding-bottom:0">
+          <div class="arch reveal-mask"><img loading="lazy" src="assets/images/Cloudy view.webp" alt="Coorg — Misty hills and coffee plantations" /></div>
+          <div class="stamp" aria-hidden="true">
+            <svg viewBox="0 0 100 100"><defs><path id="circ" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs><text><textPath href="#circ" textLength="232" lengthAdjust="spacing">KODAGU · WESTERN GHATS · COORG · </textPath></text></svg>
+            <span class="core">ॐ</span>
           </div>
         </div>
-        <div data-aos="fade-left">
-          <div class="welcome-section__image">
-            <img loading="lazy" src="assets/images/Cloudy view.webp" alt="Coorg — Misty hills and coffee plantations" />
+        <div class="pb-lead" data-aos="fade-up">
+          <span class="section-label">Kodagu District, Karnataka</span>
+          <h2 class="section-title" data-split>Coorg — Where Rivers Begin<br /><em>and Forests Breathe</em></h2>
+          <p>Nestled in the Western Ghats of Karnataka, Coorg — officially known as Kodagu — is one of India's most celebrated hill destinations. Blanketed in coffee and tea plantations, ancient forests, and mist-covered peaks, this district holds a unique place in the hearts of pilgrims, naturalists, and travellers alike.</p>
+          <p>Coorg is home to the sacred source of River Cauvery at Talacauvery, the holy Triveni Sangam at Bhagamandala, and the rich biodiversity of Brahmagiri and Nagarhole. It is a land where the divine and the natural exist in extraordinary harmony.</p>
+          <div class="pb-chips">
+            <span><i class="fa fa-mountain"></i>900–1800m elevation</span>
+            <span><i class="fa fa-cloud-rain"></i>Best Oct–Feb</span>
+            <span><i class="fa fa-om"></i>Pilgrimage circuits</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <div class="edge" style="--from:var(--paper);--to:var(--paper-deep)"><svg viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 36C220 70 420 4 640 36s400 40 600 4c90-16 160-12 200-4V80H0z"/></svg></div>
   <!-- Sacred Attractions -->
-  <section class="section section--cream">
+  <section class="section section--cream" style="padding-top:clamp(2rem,4vw,3rem)">
     <div class="container">
-      <div style="text-align:center;margin-bottom:2.5rem;" data-aos="fade-up">
-        <span class="section-label">Sacred Places</span>
-        <h2 class="section-title">Spiritual Highlights<br /><em>of Coorg</em></h2>
-        <p class="section-subtitle">Cauvery Resorts is your perfect base for visiting Coorg's most revered pilgrim destinations.</p>
+      <div class="split-head">
+        <div data-aos="fade-up"><span class="section-label">Sacred Places</span>
+        <h2 class="section-title" data-split>Spiritual Highlights<br /><em>of Coorg</em></h2></div>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="150">Cauvery Resorts is your perfect base for visiting Coorg's most revered pilgrim destinations.</p>
       </div>
-      <div class="grid-3">
-        <div class="activity-card" data-aos="fade-up">
-          <div class="activity-card__img"><img loading="lazy" src="assets/images/Sunrise.webp" alt="Talacauvery — Sacred source of River Cauvery" /></div>
-          <div class="activity-card__body">
+      <div class="pb-trail">
+        <article class="pb-stop">
+          <div class="pb-stop__photo" data-cap="Talacauvery" data-aos="fade-right"><img loading="lazy" src="assets/images/Sunrise.webp" alt="Talacauvery — Sacred source of River Cauvery" /></div>
+          <div data-aos="fade-left">
+            <span class="pb-stop__dist">2 km from resort</span>
             <h3>Talacauvery</h3>
-            <p><strong style="color:var(--saffron);">2 km from resort</strong></p>
             <p>The most sacred site in Coorg — the origin point of River Cauvery. A natural spring atop Brahmagiri Hills where millions of devotees come to perform rituals. The Cauvery Sankramana festival draws lakhs of pilgrims annually.</p>
           </div>
-        </div>
-        <div class="activity-card" data-aos="fade-up" data-aos-delay="60">
-          <div class="activity-card__img"><img loading="lazy" src="assets/images/Forest view 2.webp" alt="Bhagamandala Temple Triveni Sangam" /></div>
-          <div class="activity-card__body">
+        </article>
+        <article class="pb-stop">
+          <div class="pb-stop__photo" data-cap="Bhagamandala" data-aos="fade-left"><img loading="lazy" src="assets/images/Forest view 2.webp" alt="Bhagamandala Temple Triveni Sangam" /></div>
+          <div data-aos="fade-right">
+            <span class="pb-stop__dist">500 m from resort</span>
             <h3>Bhagamandala &amp; Triveni Sangam</h3>
-            <p><strong style="color:var(--saffron);">500 m from resort</strong></p>
             <p>Where the rivers Cauvery, Kannike, and the mythical Sujyothi converge. The Bhagandeshwara temple here is an architectural gem. One of the most spiritually charged sites in Karnataka.</p>
           </div>
-        </div>
-        <div class="activity-card" data-aos="fade-up" data-aos-delay="120">
-          <div class="activity-card__img"><img loading="lazy" src="assets/images/Forest view 3.webp" alt="Omkareshwara Temple Madikeri Coorg" /></div>
-          <div class="activity-card__body">
+        </article>
+        <article class="pb-stop">
+          <div class="pb-stop__photo" data-cap="Madikeri" data-aos="fade-right"><img loading="lazy" src="assets/images/Forest view 3.webp" alt="Omkareshwara Temple Madikeri Coorg" /></div>
+          <div data-aos="fade-left">
+            <span class="pb-stop__dist">~40 km away</span>
             <h3>Omkareshwara Temple, Madikeri</h3>
-            <p><strong style="color:var(--saffron);">~40 km away</strong></p>
             <p>A unique temple in Madikeri that blends Islamic and Gothic architectural styles with traditional Hindu temple design. Set beside a serene pond, a testament to Coorg's cultural synthesis.</p>
           </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
+  <div class="edge" style="--from:var(--paper-deep);--to:var(--paper)"><svg viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 44C160 10 360 70 580 36S960 10 1160 48s200 8 280-10V80H0z"/></svg></div>
   <!-- Natural Attractions -->
-  <section class="section">
+  <section class="section" style="padding-top:clamp(2rem,4vw,3rem)">
     <div class="container">
-      <div style="text-align:center;margin-bottom:2.5rem;" data-aos="fade-up">
+      <div class="sec-head-left" data-aos="fade-up">
         <span class="section-label">Natural Wonders</span>
-        <h2 class="section-title">Scenic Attractions<br /><em>Around Coorg</em></h2>
+        <h2 class="section-title" data-split>Scenic Attractions<br /><em>Around Coorg</em></h2>
       </div>
-      <div class="amenities-grid">
-        <div class="amenity-item" data-aos="zoom-in"><i class="fa fa-coffee"></i><h4>Coffee Estates</h4><p>Coorg produces 30% of India's coffee. Walk through lush arabica plantations and learn about the crop that built this region.</p></div>
-        <div class="amenity-item" data-aos="zoom-in" data-aos-delay="50"><i class="fa fa-mountain"></i><h4>Brahmagiri Hills</h4><p>A scenic trek offering panoramic views of the Western Ghats and the forests below. A popular sunrise trek.</p></div>
-        <div class="amenity-item" data-aos="zoom-in" data-aos-delay="100"><i class="fa fa-paw"></i><h4>Nagarhole National Park</h4><p>One of India's premier tiger and elephant reserves — a half-day safari from Coorg, ideal for wildlife lovers.</p></div>
-        <div class="amenity-item" data-aos="zoom-in" data-aos-delay="150"><i class="fa fa-water"></i><h4>Iruppu Falls</h4><p>A sacred waterfall on the banks of Lakshmana Tirtha River — pilgrims and tourists both frequent this majestic site.</p></div>
-        <div class="amenity-item" data-aos="zoom-in" data-aos-delay="200"><i class="fa fa-fort-awesome"></i><h4>Madikeri Fort</h4><p>Historic Tipu Sultan's Fort in Coorg's capital, with the beautiful Abbey Falls and Raja's Seat viewpoint nearby.</p></div>
-        <div class="amenity-item" data-aos="zoom-in" data-aos-delay="250"><i class="fa fa-pagelines"></i><h4>Dubare Elephant Camp</h4><p>Interact with and bathe elephants at this famous camp on the banks of the Cauvery river near Kushalnagar.</p></div>
+      <div class="pb-notes" data-stagger>
+        <div class="pb-note"><div class="pb-note__ico"><i class="fa fa-coffee"></i></div><h4>Coffee Estates</h4><p>Coorg produces 30% of India's coffee. Walk through lush arabica plantations and learn about the crop that built this region.</p></div>
+        <div class="pb-note"><div class="pb-note__ico"><i class="fa fa-mountain"></i></div><h4>Brahmagiri Hills</h4><p>A scenic trek offering panoramic views of the Western Ghats and the forests below. A popular sunrise trek.</p></div>
+        <div class="pb-note"><div class="pb-note__ico"><i class="fa fa-paw"></i></div><h4>Nagarhole National Park</h4><p>One of India's premier tiger and elephant reserves — a half-day safari from Coorg, ideal for wildlife lovers.</p></div>
+        <div class="pb-note"><div class="pb-note__ico"><i class="fa fa-water"></i></div><h4>Iruppu Falls</h4><p>A sacred waterfall on the banks of Lakshmana Tirtha River — pilgrims and tourists both frequent this majestic site.</p></div>
+        <div class="pb-note"><div class="pb-note__ico"><i class="fa fa-fort-awesome"></i></div><h4>Madikeri Fort</h4><p>Historic Tipu Sultan's Fort in Coorg's capital, with the beautiful Abbey Falls and Raja's Seat viewpoint nearby.</p></div>
+        <div class="pb-note"><div class="pb-note__ico"><i class="fa fa-pagelines"></i></div><h4>Dubare Elephant Camp</h4><p>Interact with and bathe elephants at this famous camp on the banks of the Cauvery river near Kushalnagar.</p></div>
       </div>
     </div>
   </section>
 
+  <div class="edge" style="--from:var(--paper);--to:var(--forest-deep)"><svg viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40C200 0 320 70 560 38S980 6 1160 44s200 16 280-14V80H0z"/></svg></div>
   <!-- Best Time -->
-  <section class="section section--gold">
+  <section class="section section--gold" style="padding-top:clamp(2rem,4vw,3rem)">
     <div class="container">
-      <div style="text-align:center;margin-bottom:2.5rem;" data-aos="fade-up">
-        <span class="section-label" style="color:var(--gold-light);">Plan Your Trip</span>
-        <h2 style="color:#fff;">Best Time to<br /><em>Visit Coorg</em></h2>
+      <div class="split-head">
+        <div data-aos="fade-up"><span class="section-label section-label--light">Plan Your Trip</span>
+        <h2 class="section-title" data-split>Best Time to<br /><em style="color:var(--gold-light)">Visit Coorg</em></h2></div>
       </div>
+      <div class="pb-months" role="img" aria-label="Month by month: Winter October to February is best, summer March to May, monsoon June to September" data-stagger>
+        <span class="b">Jan</span><span class="b">Feb</span><span class="s">Mar</span><span class="s">Apr</span><span class="s">May</span><span class="m">Jun</span><span class="m">Jul</span><span class="m">Aug</span><span class="m">Sep</span><span class="b">Oct</span><span class="b">Nov</span><span class="b">Dec</span>
+      </div>
+      <div class="pb-legend"><span class="b"><i></i>best, Oct&ndash;Feb</span><span class="s"><i></i>summer, Mar&ndash;May</span><span class="m"><i></i>monsoon, Jun&ndash;Sep</span></div>
       <div class="day-cards">
         <div class="day-card" data-aos="fade-up">
           <div class="day-card__icon"><i class="fa fa-sun"></i></div>
@@ -176,7 +206,18 @@
     </div>
   </section>
 
-  
+  <div class="edge" style="--from:var(--forest-deep);--to:var(--coffee)"><svg viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50C180 80 340 10 560 44S940 70 1140 30s200-14 300 6V80H0z"/></svg></div>
+  <section class="pb-cta pb-dark">
+    <div class="container"><div class="pb-cta__in">
+      <div data-aos="fade-up"><span class="hand" style="color:var(--gold-light)">your base in Coorg</span>
+        <h2>500 m from Bhagamandala, <em>2 km from Talacauvery.</em></h2></div>
+      <div class="pb-actions" data-aos="fade-up" data-aos-delay="150">
+        <a href="enquiry.html" class="btn btn-primary btn-lg"><i class="fa fa-paper-plane"></i> Check availability</a>
+        <a href="tel:+919449485133" class="btn btn-outline btn-lg"><i class="fa fa-phone"></i> +91-944-9485133</a>
+      </div>
+    </div></div>
+  </section>
+  </main>
 
   <footer class="footer"><div class="container">
     <div class="footer__grid">
@@ -193,7 +234,7 @@
       <div class="footer__col"><h4>Contact</h4><div class="footer__contact-list"><div class="footer__contact-item"><i class="fa fa-phone"></i><div><a href="tel:+919449485133">+91-944-9485133</a><br/><a href="tel:+919964785133">+91-996-4785133</a></div></div><div class="footer__contact-item"><i class="fa fa-map-marker-alt"></i><span>Near Talacauvery, Coorg</span></div></div></div>
     </div>
     <div class="footer__bottom"><span>&copy; <span id="footerYear"></span> Cauvery Resorts. All rights reserved.</span></div>
-  </div></footer></div>
+  </div></footer>
   <div class="fab-wrap"><a href="https://wa.me/919449485133?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20stay%20at%20Cauvery%20Resorts%2C%20Coorg" class="fab fab-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a><a href="tel:+919449485133" class="fab fab-call"><i class="fa fa-phone"></i></a></div>
   <script src="assets/js/main.js"></script>
   <script>

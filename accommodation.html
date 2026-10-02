@@ -17,7 +17,7 @@
   <meta name="twitter:image" content="https://www.cauveryresorts.com/assets/images/Sunrise.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Figtree:wght@400;500;600;700;800&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/design-v2.css" />
   <link rel="manifest" href="manifest.json" />
@@ -90,11 +90,38 @@
     ]
   }
   </script>
+  <noscript><style>[data-aos],[data-stagger]>*,.w>span,.reveal-mask,.reveal-mask>img{opacity:1!important;transform:none!important;clip-path:none!important}.draw path{stroke-dashoffset:0!important}.pg-wipe{clip-path:none!important}.pg-wipe img{transform:none!important}</style></noscript>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
   <div class="scroll-progress" aria-hidden="true"></div>
   <div class="page-transition" id="pageTrans"></div>
+  <!-- Inline SVG sprite: icons drawn for this site -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <path id="circ" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/>
+      <symbol id="i-diya" viewBox="0 0 24 24"><path d="M3 13.5c0 3.4 4 5.5 9 5.5s9-2.1 9-5.5H3z"/><path d="M12 12.5c-2-1.8-2.4-4.2-.2-7 .3 1.6 1.2 2 2 3.2.8 1.3.7 2.7-.1 3.8"/></symbol>
+      <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3c3.5 4.2 6 7.2 6 10.3a6 6 0 0 1-12 0C6 10.2 8.5 7.2 12 3z"/><path d="M9.2 14.2c.2 1.4 1.1 2.3 2.6 2.6"/></symbol>
+      <symbol id="i-bus" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="12.5" rx="2.5"/><path d="M3.5 11h17M8 20v-3M16 20v-3"/><circle cx="8" cy="14.2" r=".6"/><circle cx="16" cy="14.2" r=".6"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><path d="M5 17.5h14M7.5 17.5a4.5 4.5 0 0 1 9 0M12 5v2.5M4.6 9.6l1.8 1.5M19.4 9.6l-1.8 1.5M2.5 13.5h2M19.5 13.5h2"/></symbol>
+      <symbol id="i-bowl" viewBox="0 0 24 24"><path d="M3.5 11.5h17c0 4.4-3.6 7.5-8.5 7.5s-8.5-3.1-8.5-7.5z"/><path d="M8.5 8.5c-.8-1 .8-1.7 0-2.8M12 8.5c-.8-1 .8-1.7 0-2.8M15.5 8.5c-.8-1 .8-1.7 0-2.8"/></symbol>
+      <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M6 3.5h12v17l-2-1.4-2 1.4-2-1.4-2 1.4-2-1.4-2 1.4z"/><path d="M9 8.5h6M9 12h6M9 15.5h3"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.5 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></symbol>
+      <symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 18V7M3 14h18v4M21 14v-2.5a2.5 2.5 0 0 0-2.5-2.5H11v5"/><circle cx="7" cy="11" r="1.6"/></symbol>
+      <symbol id="i-fan" viewBox="0 0 24 24"><circle cx="12" cy="12" r="1.5"/><path d="M12 10.5C10 6 11.5 3.5 14 4.3c2 .8 1.2 4-2 6.2zM13.5 12.2c4.5-2 7-.5 6.5 2.2-.5 2.3-3.5 2.3-6.5-.7zM10.6 13c-1.2 4.8-4 6-5.6 4.2-1.5-1.8.4-4 4.8-5z"/></symbol>
+      <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M3.5 9.5a12 12 0 0 1 17 0M6.5 12.8a8 8 0 0 1 11 0M9.4 16a4 4 0 0 1 5.2 0"/><circle cx="12" cy="19" r=".8"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 19c0-3.5 2.7-5.5 6-5.5s6 2 6 5.5M16 5.5a3 3 0 0 1 0 5.6M18 14c2 .6 3 2.2 3 5"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M19 14.5A8 8 0 0 1 9.5 5a8 8 0 1 0 9.5 9.5z"/></symbol>
+      <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19C5 10 10 5 19 5c0 9-5 14-14 14zM5 19c3-5 6-8 10-10"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s6-5.6 6-10.5a6 6 0 0 0-12 0C6 15.4 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.2"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.2 2"/></symbol>
+      <symbol id="i-bath" viewBox="0 0 24 24"><path d="M3 12h18v2a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5v-2zM6 12V6.5a2 2 0 0 1 3.6-1.2M7 19l-1 2M17 19l1 2"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6 3.5h3l1.500 4-2 1.300a11 11 0 0 0 6 6l1.300-2 4 1.500v3a2 2 0 0 1-2 2A15 15 0 0 1 4 5.500a2 2 0 0 1 2-2z"/></symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H10l-4.500 3.500V16H4z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3.500" y="5.500" width="17" height="13" rx="1.500"/><path d="M4 7l8 6 8-6"/></symbol>
+    </defs>
+  </svg>
   <nav class="navbar" id="mainNav">
     <div class="container">
       <div class="navbar__inner">
@@ -128,7 +155,7 @@
     </div>
   </nav>
 
-  <div class="page-hero">
+    <div class="page-hero">
     <div class="page-hero__bg" style="background-image:url('assets/images/Resort home view 2.webp');"></div>
     <div class="page-hero__bg" style="background-image:url('assets/images/resort3.webp');"></div>
     <div class="page-hero__bg" style="background-image:url('assets/images/Forest view 2.webp');"></div>
@@ -136,341 +163,245 @@
     <div class="page-hero__overlay"></div>
     <div class="container">
       <div class="page-hero__content">
-        <span class="section-label" style="color:var(--gold-light);">Our Accommodation</span>
-        <h1>Rooms &amp; Tariff</h1>
-        <p style="color:rgba(255,255,255,.78);margin-top:.5rem;">Clean, comfortable rooms from ₹1,500/night — just 2 km from Talacauvery</p>
+        <span class="pg-hero-note">four rooms and one big hall</span>
+        <h1 data-split>Rooms &amp; Tariff</h1>
+        <p class="pg-lede">Clean, comfortable rooms from &#8377;1,500/night, just 2 km from Talacauvery.</p>
         <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Accommodation</span></div>
       </div>
     </div>
   </div>
 
-  <div class="trust-strip">
+  <div class="trust-strip" aria-label="At a glance">
     <div class="trust-strip__track">
       <div class="trust-strip__inner">
-        <div class="trust-item"><i class="fa fa-door-open"></i> 4 Rooms + 1 Large Hall</div><div class="trust-sep"></div>
-        <div class="trust-item"><i class="fa fa-users"></i> Hall Fits Up to 50 Persons</div><div class="trust-sep"></div>
-        <div class="trust-item"><i class="fa fa-hot-tub"></i> Hot Water in Every Room</div><div class="trust-sep"></div>
-        <div class="trust-item"><i class="fa fa-wifi"></i> Free WiFi Throughout</div><div class="trust-sep"></div>
-        <div class="trust-item"><i class="fa fa-leaf"></i> Pure Veg Kitchen on Premises</div><div class="trust-sep"></div>
-        <div class="trust-item"><i class="fa fa-parking"></i> Free Bus &amp; Car Parking</div><div class="trust-sep"></div>
-        <div class="trust-item"><i class="fa fa-door-open"></i> 4 Rooms + 1 Large Hall</div><div class="trust-sep"></div>
-        <div class="trust-item"><i class="fa fa-users"></i> Hall Fits Up to 50 Persons</div><div class="trust-sep"></div>
-        <div class="trust-item"><i class="fa fa-hot-tub"></i> Hot Water in Every Room</div><div class="trust-sep"></div>
-        <div class="trust-item"><i class="fa fa-wifi"></i> Free WiFi Throughout</div><div class="trust-sep"></div>
-        <div class="trust-item"><i class="fa fa-leaf"></i> Pure Veg Kitchen on Premises</div><div class="trust-sep"></div>
-        <div class="trust-item"><i class="fa fa-parking"></i> Free Bus &amp; Car Parking</div><div class="trust-sep"></div>
+        <span class="trust-item">4 rooms + 1 large hall</span><svg class="trust-sep ico"><use href="#i-diya"/></svg>
+        <span class="trust-item">Hall fits up to 50 persons</span><svg class="trust-sep ico"><use href="#i-diya"/></svg>
+        <span class="trust-item">Hot water in every room</span><svg class="trust-sep ico"><use href="#i-diya"/></svg>
+        <span class="trust-item">Free WiFi throughout</span><svg class="trust-sep ico"><use href="#i-diya"/></svg>
+        <span class="trust-item">Pure veg kitchen on premises</span><svg class="trust-sep ico"><use href="#i-diya"/></svg>
+        <span class="trust-item">Free bus &amp; car parking</span><svg class="trust-sep ico"><use href="#i-diya"/></svg>
       </div>
     </div>
   </div>
+  <div class="marquee-gap"></div>
 
-  <!-- Rooms Intro -->
-  <section class="section" id="main-content">
+  <!-- Large rooms -->
+  <section class="section" id="main-content" style="padding-top:clamp(2rem,4vw,3rem)">
     <div class="container">
-      <div style="text-align:center;margin-bottom:3rem;" data-aos="fade-up">
-        <span class="section-label">Our Accommodation</span>
-        <h2 class="section-title">4 Rooms &amp; <em>1 Large Hall</em></h2>
-        <p class="section-subtitle">From cosy couple rooms to large family rooms and a hall for 50 — every space is clean, comfortable, and equipped with hot water and WiFi.</p>
+      <div class="split-head">
+        <div data-aos="fade-up"><span class="section-label">where you'll sleep</span><h2 class="section-title" data-split>Four rooms, <em>one big hall.</em></h2></div>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="150">From cosy couple rooms to large family rooms and a hall for 50. Every space is clean and comfortable, with hot water and WiFi.</p>
       </div>
 
-      <!-- 2 Large Rooms (10 persons) -->
-      <h3 style="font-family:var(--sans);font-size:1rem;text-transform:uppercase;letter-spacing:.08em;color:var(--brown-mid);margin-bottom:1.2rem;" data-aos="fade-up">Large Rooms — Up to 10 Persons</h3>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-bottom:3rem;">
-
-        <!-- Large Room 1 -->
-        <div data-aos="fade-up" data-aos-delay="0" style="background:var(--white);border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh-md);border:1px solid var(--border);display:flex;flex-direction:column;">
-          <div style="position:relative;">
-            <img loading="lazy" src="assets/images/resort6.webp" alt="Large Room 1" style="width:100%;aspect-ratio:4/3;object-fit:cover;" />
-            <span style="position:absolute;top:1rem;left:1rem;background:var(--gold);color:#fff;font-size:.7rem;font-weight:700;padding:.3rem .8rem;border-radius:var(--r-pill);">ROOM 1</span>
-            <span style="position:absolute;bottom:1rem;right:1rem;background:rgba(26,31,58,.88);color:#fff;font-size:.85rem;font-weight:700;padding:.4rem .9rem;border-radius:var(--r-pill);">On Request</span>
-          </div>
-          <div style="padding:1.5rem;display:flex;flex-direction:column;flex:1;">
-            <span class="section-label" style="font-size:.7rem;">Large Family Room</span>
-            <h3 style="font-family:var(--serif);font-size:1.3rem;color:var(--brown);margin:.3rem 0 .9rem;">Spacious Room for Groups</h3>
-            <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem;">
-              <span class="room-card__tag"><i class="fa fa-users"></i> Up to 10 Persons</span>
-              <span class="room-card__tag"><i class="fa fa-hot-tub"></i> Hot Water</span>
-              <span class="room-card__tag"><i class="fa fa-wifi"></i> Free WiFi</span>
-              <span class="room-card__tag"><i class="fa fa-bath"></i> Attached Bath</span>
-              <span class="room-card__tag"><i class="fa fa-fan"></i> Ceiling Fan</span>
-            </div>
-            <div class="welcome-features" style="margin-bottom:1.2rem;">
-              <div class="welcome-feature"><i class="fa fa-check"></i> Multiple beds — ideal for families</div>
-              <div class="welcome-feature"><i class="fa fa-check"></i> Attached bathroom with solar hot water</div>
-              <div class="welcome-feature"><i class="fa fa-check"></i> Free WiFi &amp; fresh linen daily</div>
-            </div>
-            <div style="display:flex;gap:.7rem;margin-top:auto;">
-              <a href="https://wa.me/919449485133?text=Hi%2C+I+want+to+book+Room+1+(Large+Family+Room)+at+Cauvery+Resorts%2C+Coorg.+Please+share+availability+and+rates." target="_blank" rel="noopener" class="btn btn-primary" style="flex:1;justify-content:center;"><i class="fab fa-whatsapp"></i> Book on WhatsApp</a>
-              <a href="tel:+919449485133" class="btn btn-outline btn-sm" style="flex-shrink:0;"><i class="fa fa-phone"></i></a>
-            </div>
+      <article class="pg-room">
+        <div class="pg-room__media" data-aos="fade-up">
+          <div class="pg-arch pg-wipe"><img loading="lazy" src="assets/images/resort6.webp" alt="Large Room 1 at Cauvery Resorts" /></div>
+          <span class="pg-room__no">Room 1</span>
+        </div>
+        <div class="pg-room__body" data-aos="fade-up">
+          <span class="pg-room__ghost" aria-hidden="true">01</span>
+          <span class="section-label">large family room</span>
+          <h3>A big room for a big family.</h3>
+          <p>Multiple beds, so everyone from grandparents to cousins can stay together. Attached bathroom with solar hot water, free WiFi and fresh linen daily.</p>
+          <ul class="pg-spec">
+            <li><svg class="ico"><use href="#i-users"/></svg>Up to 10 persons</li>
+            <li><svg class="ico"><use href="#i-drop"/></svg>Hot water</li>
+            <li><svg class="ico"><use href="#i-wifi"/></svg>Free WiFi</li>
+            <li><svg class="ico"><use href="#i-bath"/></svg>Attached bath</li>
+            <li><svg class="ico"><use href="#i-fan"/></svg>Ceiling fan</li>
+          </ul>
+          <span class="pg-ask">rate on request</span>
+          <div class="pg-actions">
+            <a href="https://wa.me/919449485133?text=Hi%2C+I+want+to+book+Room+1+(Large+Family+Room)+at+Cauvery+Resorts%2C+Coorg.+Please+share+availability+and+rates." target="_blank" rel="noopener" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Book on WhatsApp</a>
+            <a href="tel:+919449485133" class="btn btn-outline btn-sm" aria-label="Call +91-944-9485133"><i class="fa fa-phone"></i></a>
           </div>
         </div>
+      </article>
 
-        <!-- Large Room 2 -->
-        <div data-aos="fade-up" data-aos-delay="80" style="background:var(--white);border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh-md);border:1px solid var(--border);display:flex;flex-direction:column;">
-          <div style="position:relative;">
-            <img loading="lazy" src="assets/images/resort7.webp" alt="Large Room 2" style="width:100%;aspect-ratio:4/3;object-fit:cover;" />
-            <span style="position:absolute;top:1rem;left:1rem;background:var(--gold);color:#fff;font-size:.7rem;font-weight:700;padding:.3rem .8rem;border-radius:var(--r-pill);">ROOM 2</span>
-            <span style="position:absolute;bottom:1rem;right:1rem;background:rgba(26,31,58,.88);color:#fff;font-size:.85rem;font-weight:700;padding:.4rem .9rem;border-radius:var(--r-pill);">On Request</span>
-          </div>
-          <div style="padding:1.5rem;display:flex;flex-direction:column;flex:1;">
-            <span class="section-label" style="font-size:.7rem;">Large Family Room</span>
-            <h3 style="font-family:var(--serif);font-size:1.3rem;color:var(--brown);margin:.3rem 0 .9rem;">Spacious Room for Groups</h3>
-            <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem;">
-              <span class="room-card__tag"><i class="fa fa-users"></i> Up to 10 Persons</span>
-              <span class="room-card__tag"><i class="fa fa-hot-tub"></i> Hot Water</span>
-              <span class="room-card__tag"><i class="fa fa-wifi"></i> Free WiFi</span>
-              <span class="room-card__tag"><i class="fa fa-bath"></i> Attached Bath</span>
-              <span class="room-card__tag"><i class="fa fa-fan"></i> Ceiling Fan</span>
-            </div>
-            <div class="welcome-features" style="margin-bottom:1.2rem;">
-              <div class="welcome-feature"><i class="fa fa-check"></i> Multiple beds — ideal for families</div>
-              <div class="welcome-feature"><i class="fa fa-check"></i> Attached bathroom with solar hot water</div>
-              <div class="welcome-feature"><i class="fa fa-check"></i> Free WiFi &amp; fresh linen daily</div>
-            </div>
-            <div style="display:flex;gap:.7rem;margin-top:auto;">
-              <a href="https://wa.me/919449485133?text=Hi%2C+I+want+to+book+Room+2+(Large+Family+Room)+at+Cauvery+Resorts%2C+Coorg.+Please+share+availability+and+rates." target="_blank" rel="noopener" class="btn btn-primary" style="flex:1;justify-content:center;"><i class="fab fa-whatsapp"></i> Book on WhatsApp</a>
-              <a href="tel:+919449485133" class="btn btn-outline btn-sm" style="flex-shrink:0;"><i class="fa fa-phone"></i></a>
-            </div>
+      <article class="pg-room pg-room--rev">
+        <div class="pg-room__media" data-aos="fade-up">
+          <div class="pg-arch pg-wipe"><img loading="lazy" src="assets/images/resort7.webp" alt="Large Room 2 at Cauvery Resorts" /></div>
+          <span class="pg-room__no">Room 2</span>
+        </div>
+        <div class="pg-room__body" data-aos="fade-up">
+          <span class="pg-room__ghost" aria-hidden="true">02</span>
+          <span class="section-label">large family room</span>
+          <h3>The same space, <em style="font-weight:400;color:var(--turmeric-deep)">next door.</em></h3>
+          <p>If your group is bigger than one room, Room 2 is the twin of Room 1. Same beds, same attached bathroom with solar hot water, same free WiFi and fresh linen daily.</p>
+          <ul class="pg-spec">
+            <li><svg class="ico"><use href="#i-users"/></svg>Up to 10 persons</li>
+            <li><svg class="ico"><use href="#i-drop"/></svg>Hot water</li>
+            <li><svg class="ico"><use href="#i-wifi"/></svg>Free WiFi</li>
+            <li><svg class="ico"><use href="#i-bath"/></svg>Attached bath</li>
+            <li><svg class="ico"><use href="#i-fan"/></svg>Ceiling fan</li>
+          </ul>
+          <span class="pg-ask">rate on request</span>
+          <div class="pg-actions">
+            <a href="https://wa.me/919449485133?text=Hi%2C+I+want+to+book+Room+2+(Large+Family+Room)+at+Cauvery+Resorts%2C+Coorg.+Please+share+availability+and+rates." target="_blank" rel="noopener" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Book on WhatsApp</a>
+            <a href="tel:+919449485133" class="btn btn-outline btn-sm" aria-label="Call +91-944-9485133"><i class="fa fa-phone"></i></a>
           </div>
         </div>
-
-      </div>
-
+      </article>
     </div>
   </section>
 
-  <!-- Nature break between room groups -->
-  <div class="nature-break" style="background-image:url('assets/images/Sunrise.webp')">
-    <div class="nature-break__overlay"></div>
-    <div class="nature-break__content">
-      <span class="nature-break__label">Coorg · Western Ghats</span>
-      <p class="nature-break__quote">"Wake up to mist over the valleys, birdsong outside your window."</p>
-      <a href="enquiry.html" class="btn btn-gold" style="margin-top:1rem;"><i class="fa fa-paper-plane"></i> Check Availability</a>
-    </div>
-  </div>
-
-  <section class="section">
-    <div class="container">
-      <!-- 2 Small Rooms (2 persons) -->
-      <h3 style="font-family:var(--sans);font-size:1rem;text-transform:uppercase;letter-spacing:.08em;color:var(--brown-mid);margin-bottom:1.2rem;" data-aos="fade-up">Small Rooms — Up to 2 Persons</h3>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-bottom:3rem;">
-
-        <!-- Small Room 3 -->
-        <div data-aos="fade-up" data-aos-delay="0" style="background:var(--white);border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh-md);border:2px solid var(--saffron);display:flex;flex-direction:column;position:relative;">
-          <div style="position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--saffron);color:#fff;font-size:.68rem;font-weight:700;padding:.2rem .9rem;border-radius:0 0 var(--r-md) var(--r-md);letter-spacing:.06em;z-index:2;white-space:nowrap;">⭐ MOST POPULAR</div>
-          <div style="position:relative;">
-            <img loading="lazy" src="assets/images/resort5.webp" alt="Small Room 3 — Cosy Room at Cauvery Resorts" style="width:100%;aspect-ratio:4/3;object-fit:cover;" />
-            <span style="position:absolute;top:1rem;left:1rem;background:var(--saffron);color:#fff;font-size:.7rem;font-weight:700;padding:.3rem .8rem;border-radius:var(--r-pill);">ROOM 3</span>
-            <span style="position:absolute;bottom:1rem;right:1rem;background:rgba(26,31,58,.88);color:#fff;font-size:.85rem;font-weight:700;padding:.4rem .9rem;border-radius:var(--r-pill);">On Request</span>
-          </div>
-          <div style="padding:1.5rem;display:flex;flex-direction:column;flex:1;">
-            <span class="section-label" style="font-size:.7rem;">Cosy Couple Room</span>
-            <h3 style="font-family:var(--serif);font-size:1.3rem;color:var(--brown);margin:.3rem 0 .9rem;">Perfect for Couples &amp; Pairs</h3>
-            <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem;">
-              <span class="room-card__tag"><i class="fa fa-user-friends"></i> Up to 2 Persons</span>
-              <span class="room-card__tag"><i class="fa fa-hot-tub"></i> Hot Water</span>
-              <span class="room-card__tag"><i class="fa fa-wifi"></i> Free WiFi</span>
-              <span class="room-card__tag"><i class="fa fa-bath"></i> Attached Bath</span>
-              <span class="room-card__tag"><i class="fa fa-fan"></i> Ceiling Fan</span>
-            </div>
-            <div class="welcome-features" style="margin-bottom:1.2rem;">
-              <div class="welcome-feature"><i class="fa fa-check"></i> Comfortable room for 2 guests</div>
-              <div class="welcome-feature"><i class="fa fa-check"></i> Attached bathroom with solar hot water</div>
-              <div class="welcome-feature"><i class="fa fa-check"></i> Free WiFi &amp; fresh linen daily</div>
-            </div>
-            <div style="display:flex;gap:.7rem;margin-top:auto;">
-              <a href="https://wa.me/919449485133?text=Hi%2C+I+want+to+book+Room+3+(Couple+Room)+at+Cauvery+Resorts%2C+Coorg.+Please+share+availability+and+rates." target="_blank" rel="noopener" class="btn btn-primary" style="flex:1;justify-content:center;"><i class="fab fa-whatsapp"></i> Book on WhatsApp</a>
-              <a href="tel:+919449485133" class="btn btn-outline btn-sm" style="flex-shrink:0;"><i class="fa fa-phone"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Small Room 4 -->
-        <div data-aos="fade-up" data-aos-delay="80" style="background:var(--white);border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh-md);border:1px solid var(--border);display:flex;flex-direction:column;">
-          <div style="position:relative;">
-            <img loading="lazy" src="assets/images/resort4.webp" alt="Small Room 4 — Cosy Room at Cauvery Resorts" style="width:100%;aspect-ratio:4/3;object-fit:cover;" />
-            <span style="position:absolute;top:1rem;left:1rem;background:var(--gold);color:#fff;font-size:.7rem;font-weight:700;padding:.3rem .8rem;border-radius:var(--r-pill);">ROOM 4</span>
-            <span style="position:absolute;bottom:1rem;right:1rem;background:rgba(26,31,58,.88);color:#fff;font-size:.85rem;font-weight:700;padding:.4rem .9rem;border-radius:var(--r-pill);">On Request</span>
-          </div>
-          <div style="padding:1.5rem;display:flex;flex-direction:column;flex:1;">
-            <span class="section-label" style="font-size:.7rem;">Cosy Couple Room</span>
-            <h3 style="font-family:var(--serif);font-size:1.3rem;color:var(--brown);margin:.3rem 0 .9rem;">Perfect for Couples &amp; Pairs</h3>
-            <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem;">
-              <span class="room-card__tag"><i class="fa fa-user-friends"></i> Up to 2 Persons</span>
-              <span class="room-card__tag"><i class="fa fa-hot-tub"></i> Hot Water</span>
-              <span class="room-card__tag"><i class="fa fa-wifi"></i> Free WiFi</span>
-              <span class="room-card__tag"><i class="fa fa-bath"></i> Attached Bath</span>
-              <span class="room-card__tag"><i class="fa fa-fan"></i> Ceiling Fan</span>
-            </div>
-            <div class="welcome-features" style="margin-bottom:1.2rem;">
-              <div class="welcome-feature"><i class="fa fa-check"></i> Comfortable room for 2 guests</div>
-              <div class="welcome-feature"><i class="fa fa-check"></i> Attached bathroom with solar hot water</div>
-              <div class="welcome-feature"><i class="fa fa-check"></i> Free WiFi &amp; fresh linen daily</div>
-            </div>
-            <div style="display:flex;gap:.7rem;margin-top:auto;">
-              <a href="https://wa.me/919449485133?text=Hi%2C+I+want+to+book+Room+4+(Couple+Room)+at+Cauvery+Resorts%2C+Coorg.+Please+share+availability+and+rates." target="_blank" rel="noopener" class="btn btn-primary" style="flex:1;justify-content:center;"><i class="fab fa-whatsapp"></i> Book on WhatsApp</a>
-              <a href="tel:+919449485133" class="btn btn-outline btn-sm" style="flex-shrink:0;"><i class="fa fa-phone"></i></a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Big Hall (50 persons) -->
-      <h3 style="font-family:var(--sans);font-size:1rem;text-transform:uppercase;letter-spacing:.08em;color:var(--brown-mid);margin-bottom:1.2rem;" data-aos="fade-up">Large Hall — Up to 50 Persons</h3>
-      <div data-aos="fade-up" style="background:var(--white);border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh-md);border:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:0;">
-        <img loading="lazy" src="assets/images/group hall image.webp" alt="Pilgrim &amp; Group Hall — Cauvery Resorts" style="width:100%;height:100%;min-height:260px;object-fit:cover;" />
-        <div style="padding:2rem;">
-          <span class="section-label" style="font-size:.72rem;">Group Hall</span>
-          <h3 style="font-family:var(--serif);font-size:1.5rem;color:var(--brown);margin:.4rem 0 1rem;">Pilgrim &amp; Group Hall</h3>
-          <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.2rem;">
-            <span class="room-card__tag"><i class="fa fa-users"></i> Up to 50 Persons</span>
-            <span class="room-card__tag"><i class="fa fa-hot-tub"></i> Hot Water</span>
-            <span class="room-card__tag"><i class="fa fa-wifi"></i> Free WiFi</span>
-            <span class="room-card__tag"><i class="fa fa-fan"></i> Ceiling Fan</span>
-          </div>
-          <div class="welcome-features" style="margin-bottom:1.5rem;">
-            <div class="welcome-feature"><i class="fa fa-check"></i> Ideal for pilgrim groups &amp; trusts</div>
-            <div class="welcome-feature"><i class="fa fa-check"></i> Shared bathroom facility with hot water</div>
-            <div class="welcome-feature"><i class="fa fa-check"></i> Free WiFi access</div>
-            <div class="welcome-feature"><i class="fa fa-check"></i> Spacious open layout for group stay</div>
-            <div class="welcome-feature"><i class="fa fa-check"></i> GST invoice available for organizations</div>
-          </div>
-          <div style="display:flex;gap:.7rem;flex-wrap:wrap;">
-            <a href="https://wa.me/919449485133?text=Hi%2C+I+want+to+enquire+about+the+Group+Hall+at+Cauvery+Resorts%2C+Coorg+for+a+pilgrim+group.+Please+share+availability+and+rates." target="_blank" rel="noopener" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Enquire on WhatsApp</a>
-            <a href="tel:+919449485133" class="btn btn-outline"><i class="fa fa-phone"></i> Call Us</a>
-          </div>
-        </div>
-      </div>
-
-
-    </div>
+  <!-- Vista -->
+  <section class="vista" aria-label="Morning in Coorg">
+    <div class="vista__img" data-parallax="0.12"><img loading="lazy" src="assets/images/Sunrise.webp" alt="Sunrise over the Western Ghats from Cauvery Resorts" /></div>
+    <div class="container"><div class="vista__body" data-aos="fade-up">
+      <span class="hand">Coorg, Western Ghats</span>
+      <blockquote>Wake up to mist over the valleys, and birdsong outside your window.</blockquote>
+      <a href="enquiry.html" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Check availability</a>
+    </div></div>
   </section>
 
-    <!-- Nature Break -->
-  <div class="nature-break" style="background-image:url('assets/images/Terrace view.webp')">
-    <div class="nature-break__overlay"></div>
-    <div class="nature-break__content">
-      <span class="nature-break__label">Coorg · 2,000m Above Sea Level</span>
-      <p class="nature-break__quote">"Wake up to Coorg mist, birdsong, and mountain air — a rare privilege at ₹1,500/night."</p>
-    </div>
-  </div>
-
-<!-- Monks Section -->
-  <section class="section section--gold">
-    <div class="container">
-      <div class="grid-2" data-aos="fade-up">
-        <div>
-          <span class="section-label" style="color:var(--gold-light);">Special Welcome</span>
-          <h2 style="color:#fff;">Monks &amp; Sanyasis<br /><em>Always Welcome</em></h2>
-          <div class="divider-om"><span>ॐ</span></div>
-          <p style="color:rgba(255,255,255,.78);margin-bottom:1rem;">We honour the tradition of hospitality to the renounced. Monks, sanyasis, and spiritual practitioners are warmly welcomed with room-only stays — no meal package required.</p>
-          <p style="color:rgba(255,255,255,.78);margin-bottom:1.5rem;">Our premises maintain a strictly sattvic environment — no non-vegetarian food, no alcohol, no tobacco — a spiritually safe space for those on the path of renunciation.</p>
-          <div class="welcome-features">
-            <div class="welcome-feature" style="color:rgba(255,255,255,.82);"><i class="fa fa-check" style="color:var(--gold-light);"></i> Room-only stay, no meal obligation</div>
-            <div class="welcome-feature" style="color:rgba(255,255,255,.82);"><i class="fa fa-check" style="color:var(--gold-light);"></i> Flexible &amp; compassionate rates</div>
-            <div class="welcome-feature" style="color:rgba(255,255,255,.82);"><i class="fa fa-check" style="color:var(--gold-light);"></i> Fully sattvic premises</div>
-          </div>
-          <a href="contactus.html" class="btn btn-gold" style="margin-top:1.5rem;"><i class="fa fa-phone"></i> Contact Us</a>
-        </div>
-        <div>
-          <img loading="lazy" src="assets/images/Night view.webp" alt="Peaceful resort for monks" style="width:100%;border-radius:var(--r-xl);aspect-ratio:4/5;object-fit:cover;box-shadow:var(--sh-lg);opacity:.85;" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Day Bathing -->
+  <!-- Small rooms -->
   <section class="section section--cream">
     <div class="container">
-      <div style="text-align:center;margin-bottom:2.5rem;" data-aos="fade-up">
-        <span class="section-label">Day Facility</span>
-        <h2 class="section-title">Day Bathing<br /><em>for Pilgrims</em></h2>
-        <p class="section-subtitle">Don't need an overnight stay? Use our clean bathroom facility before or after your darshan.</p>
+      <div class="sec-head-left" data-aos="fade-up"><span class="section-label">rooms 3 &amp; 4</span><h2 class="section-title" data-split>For two, <em>comfortably.</em></h2><p class="section-subtitle">Two cosy rooms, each for up to 2 persons.</p></div>
+      <div class="pg-duo">
+        <div class="pg-snap" data-aos="fade-up">
+          <div class="pg-polaroid" data-cap="Room 3"><img loading="lazy" src="assets/images/resort5.webp" alt="Room 3, a cosy room at Cauvery Resorts" /><span class="pg-flag">most popular</span></div>
+          <div class="pg-snap__body">
+            <h3>Cosy couple room</h3>
+            <p>A comfortable room for two guests, with attached bathroom, solar hot water, free WiFi and fresh linen daily.</p>
+            <ul class="pg-spec">
+              <li><svg class="ico"><use href="#i-users"/></svg>Up to 2 persons</li>
+              <li><svg class="ico"><use href="#i-drop"/></svg>Hot water</li>
+              <li><svg class="ico"><use href="#i-wifi"/></svg>Free WiFi</li>
+              <li><svg class="ico"><use href="#i-bath"/></svg>Attached bath</li>
+              <li><svg class="ico"><use href="#i-fan"/></svg>Ceiling fan</li>
+            </ul>
+            <span class="pg-ask">rate on request</span>
+            <div class="pg-actions">
+              <a href="https://wa.me/919449485133?text=Hi%2C+I+want+to+book+Room+3+(Couple+Room)+at+Cauvery+Resorts%2C+Coorg.+Please+share+availability+and+rates." target="_blank" rel="noopener" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Book on WhatsApp</a>
+              <a href="tel:+919449485133" class="btn btn-outline btn-sm" aria-label="Call +91-944-9485133"><i class="fa fa-phone"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="pg-snap" data-aos="fade-up" data-aos-delay="150">
+          <div class="pg-polaroid" data-cap="Room 4"><img loading="lazy" src="assets/images/resort4.webp" alt="Room 4, a cosy room at Cauvery Resorts" /></div>
+          <div class="pg-snap__body">
+            <h3>Cosy couple room</h3>
+            <p>Room 4 is the other half of the pair: same size, same comforts.</p>
+            <ul class="pg-spec">
+              <li><svg class="ico"><use href="#i-users"/></svg>Up to 2 persons</li>
+              <li><svg class="ico"><use href="#i-drop"/></svg>Hot water</li>
+              <li><svg class="ico"><use href="#i-wifi"/></svg>Free WiFi</li>
+              <li><svg class="ico"><use href="#i-bath"/></svg>Attached bath</li>
+              <li><svg class="ico"><use href="#i-fan"/></svg>Ceiling fan</li>
+            </ul>
+            <span class="pg-ask">rate on request</span>
+            <div class="pg-actions">
+              <a href="https://wa.me/919449485133?text=Hi%2C+I+want+to+book+Room+4+(Couple+Room)+at+Cauvery+Resorts%2C+Coorg.+Please+share+availability+and+rates." target="_blank" rel="noopener" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Book on WhatsApp</a>
+              <a href="tel:+919449485133" class="btn btn-outline btn-sm" aria-label="Call +91-944-9485133"><i class="fa fa-phone"></i></a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="day-cards">
-        <div class="day-card" style="background:var(--white);border-color:var(--border);" data-aos="fade-up">
-          <div class="day-card__icon" style="background:var(--gold-pale);"><i class="fa fa-shower" style="color:var(--saffron);"></i></div>
-          <h4 style="color:var(--brown);">12 Clean Bathrooms</h4>
-          <p style="color:var(--brown-light);">Well-maintained, hygienic bathrooms with hot water for day visitors.</p>
-          <span class="day-card__price">₹100 / person</span>
-        </div>
-        <div class="day-card" style="background:var(--white);border-color:var(--border);" data-aos="fade-up" data-aos-delay="80">
-          <div class="day-card__icon" style="background:var(--gold-pale);"><i class="fa fa-clock" style="color:var(--saffron);"></i></div>
-          <h4 style="color:var(--brown);">Flexible Timings</h4>
-          <p style="color:var(--brown-light);">Day bathing available from early morning to accommodate darshan timings.</p>
-          <span class="day-card__price">From 5:00 AM</span>
-        </div>
-        <div class="day-card" style="background:var(--white);border-color:var(--border);" data-aos="fade-up" data-aos-delay="160">
-          <div class="day-card__icon" style="background:var(--gold-pale);"><i class="fa fa-users" style="color:var(--saffron);"></i></div>
-          <h4 style="color:var(--brown);">Group Bathing</h4>
-          <p style="color:var(--brown-light);">Large pilgrim groups can use our facility. Advance intimation recommended.</p>
-          <span class="day-card__price">Group Rates Available</span>
-        </div>
-      </div>
+      <p style="margin-top:2.6rem;"><a href="tariff_booking.html" class="link-draw">See the full tariff <i class="fa fa-arrow-right"></i></a></p>
     </div>
   </section>
 
-  
+  <div class="edge" style="--from:var(--paper-deep);--to:var(--forest-deep)"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0 30C220 70 360 6 600 40s420 34 620-6c90-18 170-12 220 4V80H0z"/></svg></div>
 
-
-  <!-- Enquiry Form -->
-  <section class="enquiry-section" id="enquire">
+  <!-- Hall -->
+  <section class="section section--gold" style="padding-top:clamp(2rem,5vw,4rem)">
     <div class="container">
-      <div class="enquiry-box" data-aos="fade-up">
-        <div class="enquiry-box__header">
-          <h2>Check Availability &amp; Enquire</h2>
-          <p>Fill in your details — we reply instantly on WhatsApp</p>
+      <div class="sec-head-left" data-aos="fade-up"><span class="section-label section-label--light">for the big groups</span><h2 class="section-title" data-split>Fifty people, <em>one roof.</em></h2></div>
+      <div class="pg-hall">
+        <div class="pg-hall__img" data-aos="fade-up"><div class="pg-wipe"><img loading="lazy" src="assets/images/group hall image.webp" alt="Pilgrim and group hall at Cauvery Resorts with a veranda over the valley" /></div></div>
+        <div class="pg-hall__card" data-aos="fade-up" data-aos-delay="200">
+          <span class="section-label">group hall</span>
+          <h3>Pilgrim &amp; Group Hall</h3>
+          <ul class="pg-spec">
+            <li><svg class="ico"><use href="#i-users"/></svg>Up to 50 persons</li>
+            <li><svg class="ico"><use href="#i-drop"/></svg>Hot water</li>
+            <li><svg class="ico"><use href="#i-wifi"/></svg>Free WiFi</li>
+            <li><svg class="ico"><use href="#i-fan"/></svg>Ceiling fan</li>
+          </ul>
+          <ul class="pg-list">
+            <li>Ideal for pilgrim groups &amp; trusts</li>
+            <li>Shared bathroom facility with hot water</li>
+            <li>Spacious open layout for a group stay</li>
+            <li>GST invoice available for organisations</li>
+          </ul>
+          <div class="pg-actions">
+            <a href="https://wa.me/919449485133?text=Hi%2C+I+want+to+enquire+about+the+Group+Hall+at+Cauvery+Resorts%2C+Coorg+for+a+pilgrim+group.+Please+share+availability+and+rates." target="_blank" rel="noopener" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Enquire on WhatsApp</a>
+            <a href="tel:+919449485133" class="btn btn-outline"><i class="fa fa-phone"></i> Call us</a>
+          </div>
         </div>
-        <form class="enquiry-form" id="enquiryForm" novalidate>
-          <div class="enquiry-form__group">
-            <label for="eq-name"><i class="fa fa-user"></i> Your Name</label>
-            <input type="text" id="eq-name" placeholder="e.g. Ramesh Kumar" required />
-          </div>
-          <div class="enquiry-form__group">
-            <label for="eq-phone"><i class="fa fa-phone"></i> Phone Number</label>
-            <input type="tel" id="eq-phone" placeholder="+91 98765 43210" required />
-          </div>
-          <div class="enquiry-form__group">
-            <label for="eq-checkin"><i class="fa fa-calendar"></i> Check-In Date</label>
-            <input type="date" id="eq-checkin" />
-          </div>
-          <div class="enquiry-form__group">
-            <label for="eq-checkout"><i class="fa fa-calendar-check"></i> Check-Out Date</label>
-            <input type="date" id="eq-checkout" />
-          </div>
-          <div class="enquiry-form__group">
-            <label for="eq-guests"><i class="fa fa-users"></i> Number of Guests</label>
-            <select id="eq-guests">
-              <option value="1-2">1 – 2 Guests</option>
-              <option value="3-5">3 – 5 Guests</option>
-              <option value="6-10">6 – 10 Guests</option>
-              <option value="11-25">11 – 25 Guests</option>
-              <option value="26-50">26 – 50 Guests</option>
-              <option value="50+">50+ Guests (Group)</option>
-            </select>
-          </div>
-          <div class="enquiry-form__group">
-            <label for="eq-room"><i class="fa fa-bed"></i> Room Type</label>
-            <select id="eq-room">
-              <option value="Any Room">Any Available Room</option>
-              <option value="AC Room">AC Room</option>
-              <option value="Non-AC Room">Non-AC Room</option>
-              <option value="Family Room">Large Family Room (up to 10)</option>
-              <option value="Group Hall">Pilgrim / Group Hall (up to 50)</option>
-              <option value="Day Bathing">Day Bathing Only</option>
-            </select>
-          </div>
-          <div class="enquiry-form__submit">
-            <button type="submit" class="btn btn-primary btn-lg"><i class="fab fa-whatsapp"></i> Send Enquiry on WhatsApp</button>
-            <a href="tel:+919449485133" class="btn btn-outline btn-lg"><i class="fa fa-phone"></i> Call Directly</a>
-          </div>
-        </form>
-        <p class="enquiry-note"><i class="fab fa-whatsapp"></i> We reply within minutes &bull; No advance payment to enquire</p>
       </div>
     </div>
   </section>
-  <footer class="footer">
+
+  <div class="edge" style="--from:var(--forest-deep);--to:var(--paper)"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0 44C160 10 360 70 580 36S960 10 1160 48s200 8 280-10V80H0z"/></svg></div>
+
+  <!-- Monks -->
+  <section class="section" style="padding-top:clamp(2rem,5vw,4rem)">
+    <div class="container">
+      <div class="pg-split pg-split--wide-l">
+        <div data-aos="fade-right">
+          <span class="section-label">a special welcome</span>
+          <h2 class="section-title" data-split>Monks &amp; sanyasis, <em>always welcome.</em></h2>
+          <p>We honour the tradition of hospitality to the renounced. Monks, sanyasis and spiritual practitioners are warmly welcomed for room-only stays, with no meal package required.</p>
+          <p>Our premises are strictly sattvic: no non-vegetarian food, no alcohol, no tobacco. A safe, quiet space for those on the path of renunciation.</p>
+          <ul class="welcome-features">
+            <li>Room-only stay, no meal obligation</li>
+            <li>Flexible and compassionate rates</li>
+            <li>Fully sattvic premises</li>
+          </ul>
+          <a href="contactus.html" class="btn btn-primary"><i class="fa fa-phone"></i> Contact us</a>
+        </div>
+        <div data-aos="fade-left">
+          <div class="pg-leaf"><img loading="lazy" src="assets/images/Night view.webp" alt="Cauvery Resorts lit up quietly at night" /></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Day bathing -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="sec-head-left" data-aos="fade-up"><span class="section-label">for a few hours</span><h2 class="section-title" data-split>Day bathing, <em>for pilgrims.</em></h2></div>
+      <div class="pg-ticket" data-aos="fade-up">
+        <div class="pg-ticket__main">
+          <div class="pg-ticket__price">&#8377;100<small>per person</small></div>
+        </div>
+        <div class="pg-ticket__side">
+          <h3 style="margin-bottom:.5rem">Don't need a night's stay?</h3>
+          <p style="margin-bottom:1rem;">Use our clean bathrooms before or after your darshan.</p>
+          <ul class="pg-list" style="margin-bottom:0">
+            <li>12 clean, well-kept bathrooms with hot water</li>
+            <li>Available from 5:00 AM, to fit darshan timings</li>
+            <li>Large pilgrim groups welcome. Please tell us in advance. Group rates available.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="edge" style="--from:var(--paper-deep);--to:var(--forest-deep)"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0 36C220 70 420 4 640 36s400 40 600 4c90-16 160-12 200-4V80H0z"/></svg></div>
+
+  <!-- CTA -->
+  <section class="section section--gold" style="padding-top:clamp(2rem,5vw,4rem)">
+    <div class="container">
+      <div class="pg-cta__in">
+        <div data-aos="fade-right">
+          <span class="section-label section-label--light">found one you like?</span>
+          <h2 class="section-title" data-split>Tell us the dates. <em>We'll check the room.</em></h2>
+          <p>We reply on WhatsApp, usually within minutes. No advance payment is needed just to ask.</p>
+        </div>
+        <div class="pg-cta__btns" data-aos="fade-up" data-aos-delay="150">
+          <a href="enquiry.html" class="btn btn-primary btn-lg"><i class="fa fa-paper-plane"></i> Check availability</a>
+          <a href="https://wa.me/919449485133?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20a%20stay%20at%20Cauvery%20Resorts" target="_blank" rel="noopener" class="btn btn-wa btn-lg"><i class="fab fa-whatsapp"></i> WhatsApp us</a>
+          <a class="hand" href="tel:+919449485133">or call +91-944-9485133</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer class="footer">
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
@@ -548,36 +479,7 @@
     <img src="" alt="" id="lbImg" />
     <button class="lightbox-next" id="lbNext" aria-label="Next"><i class="fa fa-chevron-right"></i></button>
   </div>
-  <script>
-  (function(){
-    var today = new Date().toISOString().split('T')[0];
-    var ci = document.getElementById('eq-checkin');
-    var co = document.getElementById('eq-checkout');
-    if(ci) ci.min = today;
-    if(co) co.min = today;
-    if(ci) ci.addEventListener('change', function(){ if(co) co.min = ci.value; });
-    var f = document.getElementById('enquiryForm');
-    if(f) f.addEventListener('submit', function(e){
-      e.preventDefault();
-      var name = document.getElementById('eq-name').value.trim();
-      var phone = document.getElementById('eq-phone').value.trim();
-      if(!name||!phone){ alert('Please enter your name and phone number.'); return; }
-      var checkin = ci ? ci.value : '';
-      var checkout = co ? co.value : '';
-      var guests = document.getElementById('eq-guests').value;
-      var room = document.getElementById('eq-room').value;
-      var msg = 'Hello, I would like to enquire about a stay at Cauvery Resorts, Coorg.\n\n'
-        + '*Name:* ' + name + '\n'
-        + '*Phone:* ' + phone + '\n'
-        + (checkin ? '*Check-In:* ' + checkin + '\n' : '')
-        + (checkout ? '*Check-Out:* ' + checkout + '\n' : '')
-        + '*Guests:* ' + guests + '\n'
-        + '*Room Type:* ' + room + '\n\n'
-        + 'Please confirm availability. Thank you!';
-      window.open('https://wa.me/919449485133?text=' + encodeURIComponent(msg), '_blank');
-    });
-  })();
-  </script>
+  
   <!-- Mobile sticky call bar -->
   <div class="mobile-cta-bar">
     <a href="tel:+919449485133" class="mobile-cta-bar__btn mobile-cta-bar__btn--call"><i class="fa fa-phone"></i> Call Now</a>

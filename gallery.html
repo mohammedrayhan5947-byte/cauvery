@@ -17,20 +17,10 @@
   <meta name="description" content="Photo gallery of Cauvery Resorts near Talacauvery and Bhagamandala, Coorg. View rooms, restaurant, surroundings, and the sacred landscape." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Figtree:wght@400;500;600;700;800&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/design-v2.css" />
-  <style>
-    .gallery-full { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
-    .gallery-full .gallery-item { aspect-ratio:4/3; }
-    .lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,.92); z-index:9000; align-items:center; justify-content:center; }
-    .lightbox.active { display:flex; }
-    .lightbox img { max-width:90vw; max-height:85vh; object-fit:contain; border-radius:var(--r-lg); box-shadow:var(--sh-lg); }
-    .lightbox-close { position:absolute; top:1.5rem; right:1.5rem; color:#fff; font-size:2rem; cursor:pointer; opacity:.7; transition:opacity .2s; }
-    .lightbox-close:hover { opacity:1; }
-    @media(max-width:768px){ .gallery-full { grid-template-columns:repeat(2,1fr); } }
-    @media(max-width:480px){ .gallery-full { grid-template-columns:1fr; } }
-  </style>
+  
   <link rel="manifest" href="manifest.json" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.cauveryresorts.com/"},{"@type":"ListItem","position":2,"name":"Gallery","item":"https://www.cauveryresorts.com/gallery.html"}]}</script>
 </head>
@@ -71,185 +61,79 @@
     <div class="page-hero__overlay"></div>
     <div class="container"><div class="page-hero__content">
       <h1>Our Gallery</h1>
-      <p style="color:rgba(255,255,255,.78);font-size:1.05rem;margin-top:.5rem;max-width:500px;">Moments, landscapes, and memories from Cauvery Resorts, Coorg</p>
+      <span class="x-hand-sub">Mist, hills and a few good evenings.</span>
       <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Gallery</span></div>
     </div></div>
   </div>
 
   <section class="section" id="main-content">
     <div class="container">
-      <div style="text-align:center;margin-bottom:2rem;" data-aos="fade-up">
-        <span class="section-label">A Glimpse</span>
-        <h2 class="section-title">Cauvery Resorts<br /><em>in Pictures</em></h2>
-        <p class="section-subtitle">A resort nestled in the sacred hills of Coorg — explore our spaces, surroundings, and moments.</p>
+      <div class="x-intro">
+        <div data-aos="fade-up"><span class="section-label">a glimpse</span><h2 class="section-title" data-split>Cauvery Resorts <em>in pictures.</em></h2><p class="section-subtitle">A resort nestled in the sacred hills of Coorg. Explore our spaces, surroundings, and moments.</p></div>
+        <div class="x-intro__note" data-aos="fade-up" data-aos-delay="150">
+          <svg class="x-doodle x-doodle--gold draw" viewBox="0 0 80 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M8 20h14l5-8h26l5 8h14v36H8z"/><circle pathLength="1" cx="40" cy="38" r="12"/><circle pathLength="1" cx="40" cy="38" r="5"/><path pathLength="1" d="M62 28h5"/></svg>
+          <span class="hand">tap any picture to see it bigger.</span>
+        </div>
       </div>
-
-      <!-- Filter Buttons -->
-      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin-bottom:2.5rem;" data-aos="fade-up">
-        <button class="filter-btn active" data-filter="all" style="padding:.5rem 1.3rem;border:1.5px solid var(--saffron);border-radius:var(--r-pill);font-size:.82rem;font-weight:600;cursor:pointer;background:var(--saffron);color:var(--saffron-dark);transition:all .25s;">All Photos</button>
-        <button class="filter-btn" data-filter="nature" style="padding:.5rem 1.3rem;border:1.5px solid var(--border);border-radius:var(--r-pill);font-size:.82rem;font-weight:600;cursor:pointer;background:transparent;color:var(--brown-mid);transition:all .25s;">Nature &amp; Scenery</button>
-        <button class="filter-btn" data-filter="resort" style="padding:.5rem 1.3rem;border:1.5px solid var(--border);border-radius:var(--r-pill);font-size:.82rem;font-weight:600;cursor:pointer;background:transparent;color:var(--brown-mid);transition:all .25s;">Resort &amp; Rooms</button>
-        <button class="filter-btn" data-filter="people" style="padding:.5rem 1.3rem;border:1.5px solid var(--border);border-radius:var(--r-pill);font-size:.82rem;font-weight:600;cursor:pointer;background:transparent;color:var(--brown-mid);transition:all .25s;">People &amp; Moments</button>
-        <button class="filter-btn" data-filter="activities" style="padding:.5rem 1.3rem;border:1.5px solid var(--border);border-radius:var(--r-pill);font-size:.82rem;font-weight:600;cursor:pointer;background:transparent;color:var(--brown-mid);transition:all .25s;">Activities</button>
+      <div class="filter-bar" data-aos="fade-up">
+        <button class="filter-btn active" data-filter="all">All Photos</button>
+        <button class="filter-btn" data-filter="nature">Nature &amp; Scenery</button>
+        <button class="filter-btn" data-filter="resort">Resort &amp; Rooms</button>
+        <button class="filter-btn" data-filter="people">People &amp; Moments</button>
+        <button class="filter-btn" data-filter="activities">Activities</button>
       </div>
-
-      <!-- Masonry Grid — all images -->
-      <div class="gallery-masonry" id="galleryMasonry" data-aos="fade-up">
-
-        <div class="gallery-masonry-item wide" data-category="nature" data-src="assets/images/Sunrise.webp" onclick="openLightbox(this)">
-          <img loading="eager" src="assets/images/Sunrise.webp" alt="Sunrise over the sacred Coorg hills — Cauvery Resorts" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item" data-category="resort" data-src="assets/images/wholeview.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/wholeview.webp" alt="Cauvery Resorts — panoramic resort view" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item" data-category="resort" data-src="assets/images/resort home view.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/resort home view.webp" alt="Cauvery Resorts — home view" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item" data-category="resort" data-src="assets/images/Resort2.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/Resort2.webp" alt="Cauvery Resorts exterior" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item" data-category="nature" data-src="assets/images/Terrace view.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/Terrace view.webp" alt="Terrace view at Cauvery Resorts" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item" data-category="nature" data-src="assets/images/Night view.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/Night view.webp" alt="Night view of the resort" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item" data-category="nature" data-src="assets/images/Forest view.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/Forest view.webp" alt="Forest view from the resort" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item" data-category="activities" data-src="assets/images/Bonfire.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/Bonfire.webp" alt="Bonfire evening at Cauvery Resorts" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item" data-category="resort" data-src="assets/images/Resort home view 2.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/Resort home view 2.webp" alt="Cauvery Resorts — another view" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item" data-category="nature" data-src="assets/images/Cloudy view.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/Cloudy view.webp" alt="Cloudy misty view — Coorg" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item" data-category="resort" data-src="assets/images/resort3.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/resort3.webp" alt="Cauvery Resorts building" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item" data-category="nature" data-src="assets/images/Forest view 2.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/Forest view 2.webp" alt="Dense forest — Coorg" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item" data-category="activities" data-src="assets/images/Safari riding.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/Safari riding.webp" alt="Safari riding near Coorg" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item" data-category="nature" data-src="assets/images/Garden.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/Garden.webp" alt="Resort garden" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item" data-category="nature" data-src="assets/images/Forest view 3.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/Forest view 3.webp" alt="Forest trail near Cauvery Resorts" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item" data-category="people" data-src="assets/images/Couple 1.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/Couple 1.webp" alt="Couple at Cauvery Resorts" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item" data-category="nature" data-src="assets/images/Photoshoot scenery.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/Photoshoot scenery.webp" alt="Scenic Coorg landscape" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item" data-category="activities" data-src="assets/images/Bird watching.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/Bird watching.webp" alt="Bird watching at Cauvery Resorts" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item" data-category="resort" data-src="assets/images/Parking.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/Parking.webp" alt="Parking area at Cauvery Resorts" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item" data-category="resort" data-src="assets/images/Parking 1.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/Parking 1.webp" alt="Resort parking" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item" data-category="resort" data-src="assets/images/image.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/image.webp" alt="Cauvery Resorts" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item" data-category="resort" data-src="assets/images/image1.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/image1.webp" alt="Cauvery Resorts" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item" data-category="resort" data-src="assets/images/image2.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/image2.webp" alt="Cauvery Resorts" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item" data-category="resort" data-src="assets/images/resort4.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/resort4.webp" alt="Cauvery Resorts" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item" data-category="resort" data-src="assets/images/resort5.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/resort5.webp" alt="Cauvery Resorts" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item" data-category="resort" data-src="assets/images/resort6.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/resort6.webp" alt="Cauvery Resorts" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item" data-category="resort" data-src="assets/images/resort7.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/resort7.webp" alt="Cauvery Resorts" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item" data-category="activities" data-src="assets/images/safari 2.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/safari 2.webp" alt="Safari at Cauvery Resorts" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item tall" data-category="people" data-src="assets/images/group hall image.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/group hall image.webp" alt="Group hall and gathering at Cauvery Resorts" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item" data-category="resort" data-src="assets/images/resort3.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/resort3.webp" alt="Cauvery Resorts building and campus" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-        <div class="gallery-masonry-item wide" data-category="resort" data-src="assets/images/Resort2.webp" onclick="openLightbox(this)">
-          <img loading="lazy" src="assets/images/Resort2.webp" alt="Cauvery Resorts view from gardens" />
-          <div class="gallery-item__overlay"><i class="fa fa-expand"></i></div>
-        </div>
-
+      <div class="gallery-full">
+      <div class="gallery-bento x-collage" id="galleryMasonry">
+        <div class="gallery-item" data-aos="zoom-in" data-category="nature" data-src="assets/images/Sunrise.webp" data-cap="sunrise over the sacred hills"><img loading="eager" src="assets/images/Sunrise.webp" alt="Sunrise over the sacred Coorg hills — Cauvery Resorts" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="activities" data-src="assets/images/Bonfire.webp" data-cap="bonfire nights"><img loading="eager" src="assets/images/Bonfire.webp" alt="Bonfire evening at Cauvery Resorts" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="nature" data-src="assets/images/Forest view.webp" data-cap="morning in the forest"><img loading="eager" src="assets/images/Forest view.webp" alt="Forest view from the resort" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="people" data-src="assets/images/Couple 1.webp" data-cap="a quiet moment"><img loading="lazy" src="assets/images/Couple 1.webp" alt="Couple at Cauvery Resorts" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="resort" data-src="assets/images/wholeview.webp" data-cap="the whole view"><img loading="lazy" src="assets/images/wholeview.webp" alt="Cauvery Resorts — panoramic resort view" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="nature" data-src="assets/images/Terrace view.webp" data-cap="from the terrace"><img loading="lazy" src="assets/images/Terrace view.webp" alt="Terrace view at Cauvery Resorts" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="nature" data-src="assets/images/Night view.webp" data-cap="after dark"><img loading="lazy" src="assets/images/Night view.webp" alt="Night view of the resort" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="resort" data-src="assets/images/resort home view.webp" data-cap="home, for a few nights"><img loading="lazy" src="assets/images/resort home view.webp" alt="Cauvery Resorts — home view" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="resort" data-src="assets/images/Resort2.webp" data-cap="the resort from the garden"><img loading="lazy" src="assets/images/Resort2.webp" alt="Cauvery Resorts view from the gardens" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="activities" data-src="assets/images/safari 2.webp" data-cap="out on the trail"><img loading="lazy" src="assets/images/safari 2.webp" alt="Safari at Cauvery Resorts" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="nature" data-src="assets/images/Cloudy view.webp" data-cap="when the cloud comes down"><img loading="lazy" src="assets/images/Cloudy view.webp" alt="Cloudy misty view — Coorg" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="activities" data-src="assets/images/Bird watching.webp" data-cap="bird watching"><img loading="lazy" src="assets/images/Bird watching.webp" alt="Bird watching at Cauvery Resorts" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="nature" data-src="assets/images/Forest view 2.webp" data-cap="a stream in the forest"><img loading="lazy" src="assets/images/Forest view 2.webp" alt="Dense forest — Coorg" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="people" data-src="assets/images/group hall image.webp" data-cap="the group hall"><img loading="lazy" src="assets/images/group hall image.webp" alt="Group hall and gathering at Cauvery Resorts" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="resort" data-src="assets/images/resort3.webp" data-cap="the building and campus"><img loading="lazy" src="assets/images/resort3.webp" alt="Cauvery Resorts building and campus" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="nature" data-src="assets/images/Garden.webp" data-cap="the garden"><img loading="lazy" src="assets/images/Garden.webp" alt="Resort garden" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="resort" data-src="assets/images/Resort home view 2.webp" data-cap="another angle"><img loading="lazy" src="assets/images/Resort home view 2.webp" alt="Cauvery Resorts — another view" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="activities" data-src="assets/images/Safari riding.webp" data-cap="safari riding"><img loading="lazy" src="assets/images/Safari riding.webp" alt="Safari riding near Coorg" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="resort" data-src="assets/images/resort4.webp" data-cap="around the resort"><img loading="lazy" src="assets/images/resort4.webp" alt="Cauvery Resorts" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="nature" data-src="assets/images/Forest view 3.webp" data-cap="the forest trail"><img loading="lazy" src="assets/images/Forest view 3.webp" alt="Forest trail near Cauvery Resorts" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="nature" data-src="assets/images/Photoshoot scenery.webp" data-cap="scenery worth a photo"><img loading="lazy" src="assets/images/Photoshoot scenery.webp" alt="Scenic Coorg landscape" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="resort" data-src="assets/images/Parking.webp" data-cap="room to park"><img loading="lazy" src="assets/images/Parking.webp" alt="Parking area at Cauvery Resorts" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="resort" data-src="assets/images/resort5.webp" data-cap="around the resort"><img loading="lazy" src="assets/images/resort5.webp" alt="Cauvery Resorts" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="resort" data-src="assets/images/image.webp" data-cap="a corner of the resort"><img loading="lazy" src="assets/images/image.webp" alt="Cauvery Resorts" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="resort" data-src="assets/images/resort6.webp" data-cap="around the resort"><img loading="lazy" src="assets/images/resort6.webp" alt="Cauvery Resorts" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="resort" data-src="assets/images/resort7.webp" data-cap="around the resort"><img loading="lazy" src="assets/images/resort7.webp" alt="Cauvery Resorts" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="resort" data-src="assets/images/image1.webp" data-cap="around the resort"><img loading="lazy" src="assets/images/image1.webp" alt="Cauvery Resorts" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="resort" data-src="assets/images/image2.webp" data-cap="around the resort"><img loading="lazy" src="assets/images/image2.webp" alt="Cauvery Resorts" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="people" data-src="assets/images/cauvery1.png" data-cap="at the entrance"><img loading="lazy" src="assets/images/cauvery1.png" alt="Guests gathered at the entrance of Cauvery Yatrika Dhama, Bhagamandala" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
+        <div class="gallery-item" data-aos="zoom-in" data-category="resort" data-src="assets/images/Parking 1.webp" data-cap="buses welcome"><img loading="lazy" src="assets/images/Parking 1.webp" alt="Resort parking" /><div class="gallery-item__overlay"><i class="fa fa-expand"></i></div></div>
       </div>
-
-    </div>
-  </section>
-
-  <!-- Nature break -->
-  <div class="nature-break" style="background-image:url('assets/images/Photoshoot scenery.webp')">
-    <div class="nature-break__overlay"></div>
-    <div class="nature-break__content">
-      <span class="nature-break__label">Coorg · Western Ghats</span>
-      <p class="nature-break__quote">"The mist, the valleys, the birdsong — Coorg is not a destination, it is a feeling."</p>
-      <a href="enquiry.html" class="btn btn-gold" style="margin-top:1rem;"><i class="fa fa-paper-plane"></i> Book Your Stay</a>
-    </div>
-  </div>
-
-  <section class="section">
-    <div class="container">
-      <!-- Share bar -->
-      <div class="share-bar" style="margin-top:2rem;">
-        <span><i class="fa fa-share-alt"></i> Share this gallery:</span>
-        <a class="share-btn" data-share="Beautiful resort near Talacauvery, Coorg — Cauvery Resorts" href="#"><i class="fab fa-whatsapp"></i> Share on WhatsApp</a>
+      </div>
+      <div class="x-gal-foot">
+        <div class="share-bar" style="margin:0"><span><i class="fa fa-share-alt"></i> Share this gallery:</span>
+          <a class="share-btn" data-share="Beautiful resort near Talacauvery, Coorg — Cauvery Resorts" href="#"><i class="fab fa-whatsapp"></i> Share on WhatsApp</a></div>
       </div>
     </div>
   </section>
+
+  <div class="edge" style="--from:var(--paper);--to:var(--forest-deep)"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0 50C180 80 340 10 560 44S940 70 1140 30s200-14 300 6V80H0z"/></svg></div>
+  <section class="vista" aria-label="coorg · western ghats">
+    <div class="vista__img" data-parallax="0.12"><img loading="lazy" src="assets/images/Night view.webp" alt="The resort and hills at night" /></div>
+    <div class="container"><div class="vista__body" data-aos="fade-up">
+      <span class="hand">coorg · western ghats</span>
+      <blockquote>"The mist, the valleys, the birdsong — Coorg is not a destination, it is a feeling."</blockquote>
+      <a href="enquiry.html" class="btn btn-gold btn-lg"><i class="fa fa-paper-plane"></i> Book Your Stay</a>
+    </div></div>
   </section>
 
-  
-
-  <footer class="footer"><div class="container">
+<footer class="footer"><div class="container">
     <div class="footer__grid">
       <div class="footer__brand"><span class="footer__logo-text">Cauvery Resorts</span><span class="footer__logo-sub">Coorg &bull; Since 2008</span><p>A sacred retreat near the source of River Cauvery.</p><div class="footer__socials"><a href="https://wa.me/919449485133?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20stay%20at%20Cauvery%20Resorts%2C%20Coorg" class="footer__social"><i class="fab fa-whatsapp"></i></a></div></div>
       <div class="footer__col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="accommodation.html">Rooms</a></li><li><a href="restaurant.html">Restaurant</a></li><li><a href="tariff_booking.html">Tariff</a></li></ul></div>
@@ -268,60 +152,6 @@
   <div class="fab-wrap"><a href="https://wa.me/919449485133?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20stay%20at%20Cauvery%20Resorts%2C%20Coorg" class="fab fab-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a><a href="tel:+919449485133" class="fab fab-call"><i class="fa fa-phone"></i></a></div>
   <script src="assets/js/main.js"></script>
   <script>
-  // Gallery filter
-  document.querySelectorAll('.filter-btn').forEach(function(btn){
-    btn.addEventListener('click',function(){
-      document.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('active');});
-      btn.classList.add('active');
-      var filter=btn.dataset.filter;
-      document.querySelectorAll('.gallery-masonry-item').forEach(function(item){
-        item.style.display=(filter==='all'||item.dataset.category===filter)?'':'none';
-      });
-    });
-  });
-
-  // Lightbox
-  var allItems=[];
-  var currentIdx=0;
-  function buildItemList(){
-    allItems=Array.from(document.querySelectorAll('[data-src]'));
-  }
-  function openLightbox(el){
-    buildItemList();
-    currentIdx=allItems.indexOf(el);
-    var src=el.getAttribute('data-src');
-    var alt=el.querySelector('img')?el.querySelector('img').alt:'';
-    var lb=document.getElementById('lightbox');
-    var lbImg=document.getElementById('lbImg');
-    lbImg.src=src; lbImg.alt=alt;
-    lb.classList.add('active');
-    document.body.style.overflow='hidden';
-  }
-  document.getElementById('lbClose').addEventListener('click',function(){
-    document.getElementById('lightbox').classList.remove('active');
-    document.body.style.overflow='';
-  });
-  document.getElementById('lbPrev').addEventListener('click',function(){
-    if(!allItems.length)return;
-    currentIdx=(currentIdx-1+allItems.length)%allItems.length;
-    openLightbox(allItems[currentIdx]);
-  });
-  document.getElementById('lbNext').addEventListener('click',function(){
-    if(!allItems.length)return;
-    currentIdx=(currentIdx+1)%allItems.length;
-    openLightbox(allItems[currentIdx]);
-  });
-  document.getElementById('lightbox').addEventListener('click',function(e){
-    if(e.target===this){this.classList.remove('active');document.body.style.overflow='';}
-  });
-  document.addEventListener('keydown',function(e){
-    var lb=document.getElementById('lightbox');
-    if(!lb.classList.contains('active'))return;
-    if(e.key==='Escape'){lb.classList.remove('active');document.body.style.overflow='';}
-    if(e.key==='ArrowLeft')document.getElementById('lbPrev').click();
-    if(e.key==='ArrowRight')document.getElementById('lbNext').click();
-  });
-
   var fy=document.getElementById('footerYear');if(fy)fy.textContent=new Date().getFullYear();
   document.querySelectorAll('a[href]').forEach(function(a){var href=a.getAttribute('href');if(!href||href.startsWith('#')||href.startsWith('tel:')||href.startsWith('mailto:')||href.startsWith('http')||a.target==='_blank')return;a.addEventListener('click',function(e){e.preventDefault();var pt=document.getElementById('pageTrans');if(pt){pt.classList.add('enter');setTimeout(function(){window.location.href=href;},380);}else{window.location.href=href;}});});
   </script>

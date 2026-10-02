@@ -8,170 +8,61 @@
   <meta name="robots" content="noindex, nofollow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Figtree:wght@400;500;600;700;800&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <style>
-    .error-page {
-      min-height: 100vh;
-      background: linear-gradient(160deg, #0a1f0a 0%, #1a3d1a 40%, #0d2b0d 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .error-page::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: url('assets/images/wholeview.webp') center/cover no-repeat;
-      opacity: 0.08;
-      z-index: 0;
-    }
-    .error-card {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      max-width: 600px;
-      width: 100%;
-    }
-    .error-number {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(7rem, 20vw, 12rem);
-      font-weight: 700;
-      line-height: 1;
-      background: linear-gradient(135deg, #c9a84c 0%, #f0d478 48%, #b8943e 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 0;
-      display: block;
-      filter: drop-shadow(0 4px 24px rgba(201,168,76,.4));
-    }
-    .error-icon {
-      font-size: 3rem;
-      color: rgba(255,255,255,.2);
-      margin: 0.5rem 0 1.5rem;
-      display: block;
-    }
-    .error-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.4rem, 4vw, 2.2rem);
-      color: #fff;
-      margin-bottom: 1rem;
-    }
-    .error-desc {
-      color: rgba(255,255,255,.65);
-      font-size: 1rem;
-      line-height: 1.8;
-      margin-bottom: 2.5rem;
-    }
-    .error-actions {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 3rem;
-    }
-    .error-links {
-      border-top: 1px solid rgba(255,255,255,.1);
-      padding-top: 2rem;
-    }
-    .error-links p {
-      color: rgba(255,255,255,.5);
-      font-size: .85rem;
-      margin-bottom: 1rem;
-    }
-    .error-links-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: .75rem;
-    }
-    .error-link-item {
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 12px;
-      padding: 1rem .75rem;
-      color: rgba(255,255,255,.8);
-      text-decoration: none;
-      font-size: .85rem;
-      font-weight: 500;
-      transition: all .25s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: .5rem;
-    }
-    .error-link-item i {
-      font-size: 1.3rem;
-      color: var(--gold-light);
-    }
-    .error-link-item:hover {
-      background: rgba(201,168,76,.15);
-      border-color: rgba(201,168,76,.4);
-      color: #fff;
-      transform: translateY(-3px);
-    }
-    @media (max-width: 480px) {
-      .error-links-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    /* Floating Om particles */
-    .error-particle {
-      position: absolute;
-      color: rgba(201,168,76,.08);
-      font-family: 'Playfair Display', serif;
-      pointer-events: none;
-      animation: floatUp 8s ease-in-out infinite;
-      z-index: 0;
-    }
-    @keyframes floatUp {
-      0%   { opacity: 0; transform: translateY(0) rotate(0deg); }
-      20%  { opacity: 1; }
-      80%  { opacity: .5; }
-      100% { opacity: 0; transform: translateY(-120px) rotate(20deg); }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/design-v2.css" />
 </head>
-<body>
+<body class="pb-page">
   <div class="page-transition" id="pageTrans"></div>
 
-  <div class="error-page">
-    <!-- decorative particles -->
-    <span class="error-particle" style="font-size:6rem;left:5%;top:20%;animation-delay:0s;">ॐ</span>
-    <span class="error-particle" style="font-size:4rem;right:8%;top:40%;animation-delay:2.5s;">ॐ</span>
-    <span class="error-particle" style="font-size:8rem;left:50%;bottom:15%;animation-delay:5s;">ॐ</span>
+  <div class="pb-404 pb-dark">
+    <div class="container pb-404__top">
+      <a href="index.html" aria-label="Cauvery Resorts home">
+        <img src="assets/images/logo.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'" />
+        <span class="brand" style="display:none">Cauvery Resorts</span>
+      </a>
+    </div>
 
-    <div class="error-card">
-      <span class="error-number">404</span>
-      <i class="fa fa-map-signs error-icon"></i>
+    <main class="pb-404__main" id="main-content">
+      <div class="container">
+        <div class="pb-404__grid">
+          <div>
+            <div class="pb-404__num" aria-label="404">
+              <span aria-hidden="true">4</span>
+              <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 8C74 8 92 26 92 50S74 92 50 92 8 74 8 50 26 8 50 8z"/><path d="M30 68C42 50 58 64 62 46S54 34 68 28" stroke-width="5"/><circle class="you" cx="30" cy="68" r="6"/></svg>
+              <span aria-hidden="true">4</span>
+            </div>
+            <h1>This Path <em>Leads Nowhere</em></h1>
+            <p class="pb-404__desc">Like a wandering pilgrim who's taken the wrong turn on the way to Talacauvery — the page you're looking for doesn't exist or has moved. Let us guide you back.</p>
+            <div class="pb-actions">
+              <a href="index.html" class="btn btn-primary btn-lg"><i class="fa fa-home"></i> Return Home</a>
+              <a href="contactus.html" class="btn btn-outline-light btn-lg"><i class="fa fa-phone"></i> Contact Us</a>
+            </div>
+          </div>
 
-      <h1 class="error-title">This Path Leads Nowhere</h1>
-      <p class="error-desc">
-        Like a wandering pilgrim who's taken the wrong turn on the way to Talacauvery —
-        the page you're looking for doesn't exist or has moved.
-        Let us guide you back.
-      </p>
-
-      <div class="error-actions">
-        <a href="index.html" class="btn btn-primary"><i class="fa fa-home"></i> Return Home</a>
-        <a href="contactus.html" class="btn btn-glass"><i class="fa fa-phone"></i> Contact Us</a>
-      </div>
-
-      <div class="error-links">
-        <p>Or visit one of these pages:</p>
-        <div class="error-links-grid">
-          <a href="accommodation.html" class="error-link-item"><i class="fa fa-bed"></i>Rooms</a>
-          <a href="tariff_booking.html" class="error-link-item"><i class="fa fa-tag"></i>Tariff</a>
-          <a href="gallery.html" class="error-link-item"><i class="fa fa-images"></i>Gallery</a>
-          <a href="restaurant.html" class="error-link-item"><i class="fa fa-utensils"></i>Restaurant</a>
-          <a href="faq.html" class="error-link-item"><i class="fa fa-question-circle"></i>FAQ</a>
-          <a href="contactus.html" class="error-link-item"><i class="fa fa-phone"></i>Contact</a>
+          <nav class="pb-404__board" aria-label="Other pages">
+            <span>Or visit one of these pages:</span>
+            <div class="pb-404__links">
+              <a href="accommodation.html"><i class="fa fa-bed"></i>Rooms</a>
+              <a href="tariff_booking.html"><i class="fa fa-tag"></i>Tariff</a>
+              <a href="gallery.html"><i class="fa fa-images"></i>Gallery</a>
+              <a href="restaurant.html"><i class="fa fa-utensils"></i>Restaurant</a>
+              <a href="faq.html"><i class="fa fa-question-circle"></i>FAQ</a>
+              <a href="contactus.html"><i class="fa fa-phone"></i>Contact</a>
+            </div>
+          </nav>
         </div>
       </div>
+    </main>
+
+    <div class="hero__hills" aria-hidden="true">
+      <svg viewBox="0 0 1440 220" preserveAspectRatio="none">
+        <path class="h1" d="M0 120C120 70 220 90 330 60S560 20 700 70s280 50 420-10 220-30 320 20V220H0z"/>
+        <path class="h2" d="M0 150C160 110 280 140 420 105S700 70 860 120s300 40 440-10c70-25 110-10 140 10V220H0z"/>
+        <path class="h3" d="M0 190C200 165 360 195 540 172S900 150 1080 178s260 12 360-10V220H0z"/>
+      </svg>
     </div>
+    <div class="pb-404__foot">Cauvery Resorts &middot; Coorg &middot; Since 2008 &middot; <a href="tel:+919449485133">+91-944-9485133</a></div>
   </div>
 
   <script>
@@ -196,32 +87,6 @@
       navigator.serviceWorker.register('/sw.js').catch(function(){});
     });
   }
-  </script>
-  <!-- Share Button -->
-  <button class="share-btn" id="shareBtn" aria-label="Share this page" title="Share"><i class="fa fa-share-alt"></i></button>
-  <div class="share-toast" id="shareToast"><i class="fa fa-check"></i> Link copied!</div>
-  <script>
-  (function(){
-    var btn = document.getElementById('shareBtn');
-    var toast = document.getElementById('shareToast');
-    if(!btn) return;
-    // Show/hide with sticky bar
-    window.addEventListener('scroll', function(){
-      var y = window.scrollY||window.pageYOffset;
-      if(y>500) btn.classList.add('visible'); else btn.classList.remove('visible');
-    },{passive:true});
-    btn.addEventListener('click', function(){
-      var data = { title: document.title, url: window.location.href };
-      if(navigator.share){
-        navigator.share(data).catch(function(){});
-      } else {
-        navigator.clipboard && navigator.clipboard.writeText(window.location.href).then(function(){
-          toast.classList.add('show');
-          setTimeout(function(){ toast.classList.remove('show'); }, 2500);
-        });
-      }
-    });
-  })();
   </script>
 </body>
 </html>
