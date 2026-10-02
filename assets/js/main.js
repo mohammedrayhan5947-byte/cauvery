@@ -311,11 +311,43 @@
     /* ---------- Scroll progress ---------- */
     var bar = document.querySelector('.scroll-progress');
     if (bar) {
+      var pTick = false;
       var prog = function () {
+        pTick = false;
         var total = document.documentElement.scrollHeight - window.innerHeight;
-        bar.style.width = (total > 0 ? (window.scrollY / total) * 100 : 0) + '%';
+        bar.style.transform = 'scaleX(' + (total > 0 ? Math.min(window.scrollY / total, 1) : 0).toFixed(4) + ')';
       };
-      window.addEventListener('scroll', prog, { passive: true }); prog();
+      window.addEventListener('scroll', function () { if (!pTick) { pTick = true; requestAnimationFrame(prog); } }, { passive: true }); prog();
+    }
+
+    /* ---------- Pause looping animations while offscreen ---------- */
+    if ('IntersectionObserver' in window) {
+      var pio = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { e.target.classList.toggle('fx-paused', !e.isIntersecting); });
+      });
+      document.querySelectorAll('.trust-strip__track,.hero__mist,.stamp,.fab-wa').forEach(function (el) { pio.observe(el); });
+    }
+
+    /* ---------- Generic staggered reveal (class added by JS only, so no-JS stays visible) ---------- */
+    if (!reduceMotion && 'IntersectionObserver' in window) {
+      var fxSel = '.room-card,.day-card,.review-card,.menu-card,.activity-card,.blog-card,.attraction-card,.temple-card,.x-card,.faq-home-item,.section-title';
+      var fxIo = new IntersectionObserver(function (es) {
+        es.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          e.target.classList.add('fx-in');
+          fxIo.unobserve(e.target);
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -5% 0px' });
+      var seen = new Map();
+      document.querySelectorAll(fxSel).forEach(function (el) {
+        if (el.closest('[data-aos],[data-reveal],.swiper,.hero') || el.hasAttribute('data-aos') || el.classList.contains('reveal-mask')) return;
+        var r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight * 0.9 && r.bottom > 0) return; // already in first view: leave alone
+        var par = el.parentElement, n = seen.get(par) || 0; seen.set(par, n + 1);
+        el.style.setProperty('--fd', Math.min(n, 5) * 80 + 'ms');
+        el.classList.add('fx');
+        fxIo.observe(el);
+      });
     }
 
     /* ---------- WhatsApp popup + FAB ---------- */
