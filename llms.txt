@@ -1,5 +1,5 @@
 # Cauvery Resorts — llms.txt
-> A pilgrim-friendly resort near Talacauvery and Bhagamandala, Coorg, Karnataka, India. Operating since 2008.
+> A group-stay (10 to 150 guests) pilgrim-friendly resort near Talacauvery and Bhagamandala, Coorg, Karnataka, India. Operating since 2008.
 
 ## About
 Cauvery Resorts (also known as Cauvery Yatrika Dhama) is a pure vegetarian resort located near the sacred source of River Cauvery in Coorg (Kodagu district), Karnataka, India. The resort is 2 km from Talacauvery and 500 m from Bhagamandala (Triveni Sangama).
@@ -14,14 +14,15 @@ Cauvery Resorts (also known as Cauvery Yatrika Dhama) is a pure vegetarian resor
 - **Coordinates:** 12.385989°N, 75.5120069°E
 
 ## Accommodation
-- Standard Non-AC Room: ₹1,500 per night (up to 3 guests, attached bathroom, hot water)
-- Deluxe AC Room: ₹2,500 per night (up to 3 guests, air conditioning, attached bathroom, hot water)
-- Pilgrim Dormitory: ₹400 per person (for large groups up to 50 people)
+- Group stays only: minimum 10 guests, maximum 150 guests. Single rooms, couples and small parties are not accepted; please enquire for group bookings.
+- Standard Non-AC Room: group rate ₹1,500 per night (attached bathroom, hot water)
+- Deluxe AC Room: group rate ₹2,500 per night (air conditioning, attached bathroom, hot water)
+- Pilgrim Dormitory: group rate ₹500 per person (for groups of 10 to 150 guests)
 - Check-in: 12:00 PM | Check-out: 11:00 AM
 - Early 5:00 AM check-out available for pilgrims attending morning darshan
 
-## Day Bathing Facility
-12 clean bathrooms with hot water available from 5:00 AM for pilgrims not requiring overnight stay. Charge: ₹100 per person.
+## Freshen Up Facility
+Freshen-up facility: 12 clean bathrooms with hot water, open daily 6:00 AM to 7:00 PM, for pilgrims not requiring overnight stay. Charge: ₹200 per person.
 
 ## Food & Restaurant
 - 100% pure vegetarian (sattvic) South Indian cuisine
@@ -47,7 +48,7 @@ Cauvery Resorts (also known as Cauvery Yatrika Dhama) is a pure vegetarian resor
 
 ## Guest Types Served
 - Hindu pilgrims visiting Talacauvery temple and Bhagamandala Triveni Sangama
-- Family groups
+- Family groups (10 to 150 guests)
 - Religious organizations and trusts
 - Monks (sanyasis) — room-only stays, no meal obligation
 - Corporate and educational groups

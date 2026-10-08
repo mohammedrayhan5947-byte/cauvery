@@ -246,6 +246,8 @@
           checkin: pick(['eq-checkin', 'checkin']), checkout: pick(['eq-checkout', 'checkout']),
           guests: pick(['eq-guests', 'guests']), roomtype: pick(['eq-room', 'roomtype']), message: pick(['eq-message', 'message'])
         };
+        var gs = document.getElementById('eq-guests') || document.getElementById('guests');
+        if (gs && gs.tagName === 'SELECT' && gs.selectedIndex > 0) data.message = ('Group size: ' + gs.options[gs.selectedIndex].text + (data.message ? ' | ' + data.message : ''));
         var btn = eqForm.querySelector('button[type="submit"]');
         var label = btn ? btn.innerHTML : '';
         if (btn) { btn.disabled = true; btn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Sending…'; }

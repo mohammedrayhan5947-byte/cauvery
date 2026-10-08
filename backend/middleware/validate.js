@@ -8,7 +8,7 @@ function validateEnquiry(req, res, next) {
   if (!phone || !/^[+\d\s\-]{7,15}$/.test(phone.trim())) errors.push('Valid phone number is required');
   if (!checkin)                                errors.push('Check-in date is required');
   if (!checkout)                               errors.push('Check-out date is required');
-  if (!guests || isNaN(guests) || guests < 1)  errors.push('Number of guests is required');
+  if (!guests || isNaN(guests) || guests < 10)  errors.push('Group stays only: minimum 10 guests');
 
   if (checkin && checkout && new Date(checkin) >= new Date(checkout)) {
     errors.push('Check-out must be after check-in');
