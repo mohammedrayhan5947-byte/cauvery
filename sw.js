@@ -1,6 +1,6 @@
 /* Cauvery Resorts — Service Worker v1.0 */
 
-const CACHE_NAME  = 'cauvery-v2';
+const CACHE_NAME  = 'cauvery-v3';
 const OFFLINE_URL = '/offline.html';
 
 const PRECACHE = [
