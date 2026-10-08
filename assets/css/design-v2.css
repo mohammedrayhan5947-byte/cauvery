@@ -2070,3 +2070,5 @@ body.pb-page .section-title em { white-space: normal; }
 .gallery-bento .gallery-item img, .gallery-masonry-item img, .room-card__img img { transition: transform .8s var(--ease-out, cubic-bezier(.22,1,.36,1)); }
 .gallery-bento .gallery-item:hover img, .gallery-masonry-item:hover img { transform: scale(1.05); }
 @media (prefers-reduced-motion: reduce) { .fx { opacity: 1 !important; } .fx.fx-in { animation: none; } }
+
+.temple-card h4 small { font-size: .55em; opacity: .85; font-weight: 400; }
